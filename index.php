@@ -11,14 +11,30 @@
 </head>
 
 <body>
+
     <div class="header">
-        <a href="#default" class="logo">CompanyLogo</a>
+        <img src="images\Logo.png" width="150px" height="30px">
 
             <div class="header-right">
                 <a href="index.php">Home</a>
                 <a href="login.php">Log in</a>
             </div>
+    </div>
 
+
+    <div class="wrapper">
+<form>
+        <div class="bod1">
+            <H1> Share your thoughts <br> with the world. </br> </H1>
+            <button type="submit" id="btn">Become a blogger -></button>
+        </div>
+
+        <div class="bod1">
+
+        </div>
+</form>
+
+<div class="footer">Finals Project for CIT236 <br>Github Repository</br><br> ABASTILLAS|FORMOSO|PARCON|SOQUENO|UNATING</br> </div>
     </div>
 
 </body>
