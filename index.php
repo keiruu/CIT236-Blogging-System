@@ -17,16 +17,25 @@
 
             <div class="header-right">
                 <a href="index.php">Home</a>
-                <a href="login.php">Log in</a>
+                    <a href="login.php">
+                        <button type="submit" id="loginbtn">Log in</button>
+                    </a>
             </div>
     </div>
 
 
     <div class="wrapper">
 <form>
+        <div class="img_container">
+                <img src="images\bluehand.png" id="bhand">
+        </div>
+        <div class="img_container2">
+                <img src="images\redhand.png" id="rhand">
+        </div>
+
         <div class="bod1">
-            <H1> Share your thoughts <br> with the world. </br> </H1>
-            <button type="submit" id="btn">Become a blogger -></button>
+        <H1> Share your thoughts <br> with the world. </br> </H1>
+            <button type="submit" id="btn" style="vertical-align:middle"><span>Become a Blogger</span></button>
         </div>
 
         <div class="bod1">

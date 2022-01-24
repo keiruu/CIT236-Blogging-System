@@ -6,38 +6,109 @@ body {
 .header {
     overflow: hidden;
     background-color: #ffffff;
-    padding: 20px 20px;
+    padding: 30px;
+    padding-bottom: 0;
 }
 
 img {
     float: left;
+    padding-left: 20px;
 }
 
 .header-right {
     float: right;
-    color: black;
-    padding-right: 10px;
+}
+
+a:link {
     text-decoration: none;
+    padding: 20px;
+}
+
+#loginbtn {
+    background: rgb(253, 210, 144);
+    background: linear-gradient(90deg, #51BDC7 0%, #8AA6FA 100%);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 75px;
+    width: 100px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 .bod1 {
     text-align: center;
-    padding: 50px;
+    padding-top: 100px;
     font-size: 25px;
+    display: relative;
+}
+
+.img_container {
+    float: right;
+    position: relative;
+}
+
+#bhand {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 250px;
+}
+
+.img_container2 {
+    position: relative;
+}
+
+#rhand {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 250px;
+    left: 250px;
 }
 
 #btn {
     background: rgb(253, 210, 144);
     background: linear-gradient(90deg, rgba(253, 210, 144, 1) 0%, rgba(253, 168, 144, 1) 100%);
+    color: white;
     margin: 10px;
     padding: 20px;
     border: none;
     border-radius: 75px;
     width: 200px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+
+#btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+#btn span:after {
+    content: '\2192';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -5px;
+    transition: 0.5s;
+}
+
+#btn:hover span {
+    padding-right: 20px;
+}
+
+#btn:hover span:after {
+    opacity: 100;
+    right: 0;
 }
 
 .footer {
     position: fixed;
+    padding: 20px;
     left: 0;
     bottom: 0;
     width: 100%;
