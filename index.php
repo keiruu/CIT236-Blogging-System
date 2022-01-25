@@ -38,8 +38,46 @@
             <button type="submit" id="btn" style="vertical-align:middle"><span>Become a Blogger</span></button>
         </div>
 
-        <div class="bod1">
-
+        <div class="bod2">
+            <div class="img_container3">
+                <img src="images\laptop.png" id="laptop">
+            </div>
+            <div class="info">
+                <div class="text">
+                    <p>January 1, 2022 by Zenrick Parcon</p>
+                    <h1>How to apply in <br> Adonis Gay Bar</br></h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam<br>
+                    pulvinar odio id finibus scelerisque. Nulla sit amet suscipit metus.<br>
+                    Nullam viverra nibh eget ex pulvinar,vel pharetra augue malesuada.</p>
+                </div>
+                <button type="submit" id="rdmebtn" style="vertical-align:middle"><span>Read More</span></button>
+            </div>
+        </div>
+        <div class="bod3">
+            <div class="table_container">
+                <table id="tb1">
+                        <tr> 
+                            <td><img src="images\hearteu.png" id="hearteu">2 people liked this</td>
+                        </tr>
+                </table>
+                        <p>COMMENTS<p>
+                <table id="tb2">
+                        <tr>
+                                <td><img src="images\yellow.png"><div>Anghela Abastillas<br>
+                                Wow this is very informative!</div>
+                                </td>
+                                
+                        </tr>
+                        <tr>
+                                <td><img src="images\peach.png">Thrys Formoso<br>
+                                Life changing. I’ve always wanted to apply but never knew how to, thank you for this! 
+                                </td>
+                        </tr>
+                        <tr>
+                                <td>You need to log in</a> to comment and like this post</td>
+                        </tr>
+                </table>
+            </div>
         </div>
 </form>
 
