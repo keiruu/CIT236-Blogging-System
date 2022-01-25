@@ -4,6 +4,8 @@
   --bg: #F9F9FD;
   --gray: #676767;
   --lightgray: #CECECE;
+  --lightyellow: #fce7c7;
+  --yellow: #fc734e;
 }
 
 * {
@@ -125,15 +127,20 @@ img {
 }
 
 .footer {
-  position: fixed;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  min-width: 100vh;
   background-color: #51BDC7;
   color: white;
   text-align: center;
 }
+
+.github-link {
+  text-decoration: none;
+  color: white;
+}
+
 
 .github-link {
   text-decoration: none;
