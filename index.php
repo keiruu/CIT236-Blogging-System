@@ -13,7 +13,8 @@
 <body>
 
     <div class="header">
-        <img src="images/Logo.png" width="150px" height="30px">
+        <img src="images\Logo.png" width="150px" height="30px">
+
             <div class="header-right">
                 <a href="index.php">Home</a>
                     <a href="login.php">
@@ -24,26 +25,63 @@
 
 
     <div class="wrapper">
-        <form>
-            <div class="img_container">
-                    <img src="images\bluehand.png" id="bhand">
-            </div>
-            <div class="img_container2">
-                    <img src="images\redhand.png" id="rhand">
-            </div>
+<form>
+        <div class="img_container">
+                <img src="images\bluehand.png" id="bhand">
+        </div>
+        <div class="img_container2">
+                <img src="images\redhand.png" id="rhand">
+        </div>
 
-            <div class="bod1">
-                <h1> Share your thoughts <br> with the world. </br> </H1>
-                <button type="submit" id="btn" style="vertical-align:middle"><span>Become a Blogger</span></button>
+        <div class="bod1">
+        <H1> Share your thoughts <br> with the world. </br> </H1>
+            <button type="submit" id="btn" style="vertical-align:middle"><span>Become a Blogger</span></button>
+        </div>
+
+        <div class="bod2">
+            <div class="img_container3">
+                <img src="images\laptop.png" id="laptop">
             </div>
-
-            <div class="bod1">
-
+            <div class="info">
+                <div class="text">
+                    <p>January 1, 2022 by Zenrick Parcon</p>
+                    <h1>How to apply in <br> Adonis Gay Bar</br></h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam<br>
+                    pulvinar odio id finibus scelerisque. Nulla sit amet suscipit metus.<br>
+                    Nullam viverra nibh eget ex pulvinar,vel pharetra augue malesuada.</p>
+                </div>
+                <button type="submit" id="rdmebtn" style="vertical-align:middle"><span>Read More</span></button>
             </div>
-        </form>
+        </div>
+        <div class="bod3">
+            <div class="table_container">
+                <table id="tb1">
+                        <tr> 
+                            <td><img src="images\hearteu.png" id="hearteu">2 people liked this</td>
+                        </tr>
+                </table>
+                        <p>COMMENTS<p>
+                <table id="tb2">
+                        <tr>
+                                <td><img src="images\yellow.png"><div>Anghela Abastillas<br>
+                                Wow this is very informative!</div>
+                                </td>
+                                
+                        </tr>
+                        <tr>
+                                <td><img src="images\peach.png">Thrys Formoso<br>
+                                Life changing. I’ve always wanted to apply but never knew how to, thank you for this! 
+                                </td>
+                        </tr>
+                        <tr>
+                                <td>You need to log in</a> to comment and like this post</td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+</form>
 
-    <div class="footer">
-        Finals Project for CIT236 <br><u><a href="https://github.com/keiruu/CIT236-Blogging-System" class="github-link" target="_blank">Github Repository</a></u></br><br> ABASTILLAS | FORMOSO | PARCON | SOQUENO | UNATING</br>
+<div class="footer">Finals Project for CIT236 <br>Github Repository</br><br> ABASTILLAS|FORMOSO|PARCON|SOQUENO|UNATING</br> </div>
     </div>
 
 </body>
