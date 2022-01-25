@@ -10,42 +10,59 @@
 </head>
 
 <body>
+    <div class="header">
+        <img src="images/Logo.png" width="150px" height="30px">
+            <div class="header-right">
+                <a href="index.php">Home</a>
+                <a href="index.php">Profile</a>
+                <a href="admin_panel.php">
+                    <button id="loginbtn">Admin Panel</button>
+                </a>
+            </div>
+    </div>
+
     <div class="body-container">
+      <div class="admin-container">
         <h1>Admin Panel</h1>
         <div class="container">
-            <table class="panel">
-              <tr>
-                <th>Users</th>
-                <th>Status</th>
-                <th>Actions</th>
-              </tr>
-              
-              <tr>
-                <td>abbyunat@gmail.com</td>
-                <td class="active"><p>Active</p></td>
-                <td>
-                  <div>
-                    <button class="btn-posts"><a href="#">View Posts</a></button>
-                    <button class="btn-profile"><a href="#">View Profile</a></button>
-                  </div>
-                </td>
-              </tr>
-              <!-- <div>
-              <?php foreach ($showUsers as $usersList): ?>
+              <table class="panel">
                 <tr>
-                  <td><p><?= $usersList['userId']; ?> </p></td>
-                  <td><p><?= $usersList['username']; ?> </p></td>
-                  <td><p><?= $usersList['password']; ?> </p></td>
-                  <td><p><?= $usersList['email']; ?> </p></td>
-                    if statement for the status, kung ano ang status ya then display a specific td tag
-                  <td class="update"><a href="update_form.php?id=<?= $usersList['userId'] ?>">Update</a></td>
-                  <td class="delete"><a href="delete.php?id=<?= $usersList['userId'] ?>">Delete</a></td>
-                  <td class="set"><a href="set.php?id=<?= $usersList['userId'] ?>">Set as Admin</a></td>
+                  <th>Users</th>
+                  <th>Status</th>
+                  <th>Actions</th>
                 </tr>
-              <?php endforeach; ?>
-              </div> -->
+                
+                <tr>
+                  <td>abbyunat@gmail.com</td>
+                  <td class="inactive"><p>Inactive</p></td>
+                  <td>
+                    <div>
+                      <button class="btn-posts"><a href="admin_view_posts.php">View Posts</a></button>
+                      <button class="btn-profile"><a href="admin_view_profile.php">View Profile</a></button>
+                    </div>
+                  </td>
+                </tr>
+                <!-- <div>
+                <?php foreach ($showUsers as $usersList): ?>
+                  <tr>
+                    <td><p><?= $usersList['userId']; ?> </p></td>
+                    <td><p><?= $usersList['username']; ?> </p></td>
+                    <td><p><?= $usersList['password']; ?> </p></td>
+                    <td><p><?= $usersList['email']; ?> </p></td>
+                      if statement for the status, kung ano ang status ya then display a specific td tag
+                    <td class="update"><a href="update_form.php?id=<?= $usersList['userId'] ?>">Update</a></td>
+                    <td class="delete"><a href="delete.php?id=<?= $usersList['userId'] ?>">Delete</a></td>
+                    <td class="set"><a href="set.php?id=<?= $usersList['userId'] ?>">Set as Admin</a></td>
+                  </tr>
+                <?php endforeach; ?>
+                </div> -->
 
-            </table>
-        </div>
+              </table>
+          </div>
+      </div>
+    </div>
+
+    <div class="footer">
+        Finals Project for CIT236 <br><u><a href="https://github.com/keiruu/CIT236-Blogging-System" class="github-link" target="_blank">Github Repository</a></u></br><br> ABASTILLAS | FORMOSO | PARCON | SOQUENO | UNATING</br>
     </div>
 </body>
