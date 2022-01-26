@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 body {
     font-family: 'Inter', sans-serif;
+    margin: auto;
 }
 
 .header {
     overflow: hidden;
     background-color: #ffffff;
     padding: 30px;
-    padding-bottom: 0;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 img {
@@ -19,7 +21,8 @@ img {
     float: right;
 }
 
-a:link {
+.login_link,
+.home_link {
     text-decoration: none;
     padding: 20px;
 }
@@ -196,11 +199,31 @@ a:link {
     padding-bottom: 5px;
 }
 
-.footer {
+#tb3 {
+    border: 1px solid rgb(238, 232, 232);
+    border-radius: 15px;
+    padding: 10px;
+    width: 100%;
+    gap: 1rem;
     display: flex;
-    flex-direction: column;
+}
+
+#tb3 tr td {
+    text-align: center;
+    vertical-align: middle;
+    color: slategray;
+}
+
+.login_link2 {
+    text-decoration: none;
+    color: slategray;
+}
+
+.footer {
+    position: absolute;
     padding: 20px;
-    min-width: 100vh;
+    left: 0;
+    right: 0;
     background-color: #51BDC7;
     color: white;
     text-align: center;
