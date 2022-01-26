@@ -128,9 +128,13 @@ a:link {
     padding: 15px;
     border: none;
     border-radius: 10px;
-    width: 150px;
+    width: 160px;
     font-family: 'Inter', sans-serif;
     cursor: pointer;
+}
+
+#rdmebtn span a {
+    color: #fc734e;
 }
 
 #rdmebtn span {
