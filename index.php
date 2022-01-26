@@ -16,8 +16,8 @@
         <img src="images\Logo.png" width="150px" height="30px">
 
             <div class="header-right">
-                <a href="index.php">Home</a>
-                    <a href="login.php">
+                <a href="index.php" class="home_link">Home</a>
+                    <a href="login.php" class="login_link">
                         <button type="submit" id="loginbtn">Log in</button>
                     </a>
             </div>
@@ -73,15 +73,18 @@
                                 Life changing. I’ve always wanted to apply but never knew how to, thank you for this! 
                                 </td>
                         </tr>
-                        <tr>
-                                <td>You need to log in</a> to comment and like this post</td>
-                        </tr>
+                </table>
+                <table id="tb3">
+                    <tr>
+                        <td>You need to<u><a href="login.php" class="login_link2"> log in</u></a> to comment and like this post</td>
+                    </tr>
                 </table>
             </div>
         </div>
 </form>
 
-<div class="footer">Finals Project for CIT236 <br>Github Repository</br><br> ABASTILLAS|FORMOSO|PARCON|SOQUENO|UNATING</br> </div>
+<div class="footer">Finals Project for CIT236 <br><u><a href="https://github.com/keiruu/CIT236-Blogging-System" class="github-link" target="_blank">Github Repository</a></u></br>
+    <br> ABASTILLAS | FORMOSO | PARCON | SOQUENO | UNATING</br> </div>
     </div>
 
 </body>
