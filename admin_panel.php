@@ -32,6 +32,9 @@
                   <th>Actions</th>
                 </tr>
                 
+                <!-- Dear Backend, placeholder lang liwat ini, ang naka comment nga div ang daw example.
+                  Insert niyo lang ang dapat nga values from db kag isulod tanan sa foreach loop
+                -->
                 <tr>
                   <td>abbyunat@gmail.com</td>
                   <td class="inactive"><p>Inactive</p></td>
@@ -42,19 +45,20 @@
                     </div>
                   </td>
                 </tr>
+
                 <!-- <div>
-                <?php foreach ($showUsers as $usersList): ?>
-                  <tr>
-                    <td><p><?= $usersList['userId']; ?> </p></td>
-                    <td><p><?= $usersList['username']; ?> </p></td>
-                    <td><p><?= $usersList['password']; ?> </p></td>
-                    <td><p><?= $usersList['email']; ?> </p></td>
-                      if statement for the status, kung ano ang status ya then display a specific td tag
-                    <td class="update"><a href="update_form.php?id=<?= $usersList['userId'] ?>">Update</a></td>
-                    <td class="delete"><a href="delete.php?id=<?= $usersList['userId'] ?>">Delete</a></td>
-                    <td class="set"><a href="set.php?id=<?= $usersList['userId'] ?>">Set as Admin</a></td>
-                  </tr>
-                <?php endforeach; ?>
+                  <?php foreach ($showUsers as $usersList): ?>
+                    <tr>
+                      <td><p><?= $usersList['userId']; ?> </p></td>
+                      <td><p><?= $usersList['username']; ?> </p></td>
+                      <td><p><?= $usersList['password']; ?> </p></td>
+                      <td><p><?= $usersList['email']; ?> </p></td>
+                        if statement for the status, kung ano ang status ya then display a specific td tag
+                      <td class="update"><a href="update_form.php?id=<?= $usersList['userId'] ?>">Update</a></td>
+                      <td class="delete"><a href="delete.php?id=<?= $usersList['userId'] ?>">Delete</a></td>
+                      <td class="set"><a href="set.php?id=<?= $usersList['userId'] ?>">Set as Admin</a></td>
+                    </tr>
+                  <?php endforeach; ?>
                 </div> -->
 
               </table>
