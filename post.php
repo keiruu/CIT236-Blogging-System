@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulag | Admin Panel</title>
-    <link rel="stylesheet" href="styles/admin.css">
+    <link rel="stylesheet" href="styles/post.css">
 </head>
 
 <body>
@@ -35,6 +35,21 @@ Nunc rutrum id augue at varius. Proin ut nisi libero. Vestibulum justo risus, pu
 
 Morbi faucibus ipsum sed massa malesuada, at lacinia quam consequat. Nullam scelerisque ultricies enim quis tempor. Proin lobortis pharetra enim at tristique. Vivamus molestie massa sit amet tellus interdum, non blandit magna congue. Pellentesque ante sem, rutrum sit amet interdum vel, fermentum quis arcu. Suspendisse posuere velit ut mattis cursus. Cras sit amet tellus suscipit, rhoncus purus sit amet, auctor est. Praesent porttitor, ipsum ac sollicitudin dictum, mauris nulla vestibulum est, at vulputate purus dolor ut ligula. Ut volutpat nulla augue, imperdiet tincidunt nisl malesuada id. Vestibulum maximus vestibulum velit, id lacinia lacus facilisis vulputate. Fusce imperdiet, erat non pulvinar rhoncus, tellus tortor posuere justo, facilisis tincidunt nunc lectus in nunc. Aliquam erat volutpat. Vivamus laoreet erat fermentum placerat vulputate. Curabitur elementum felis in dui lacinia sodales ac quis dui.</p>
       </div>
+
+      <div class="comments_container">
+        <p>COMMENTS</p>
+            <form action="#">
+                <input type="text" id="cmnt1" name="cmnt1" placeholder="Any thoughts about this post?">
+                    <div class="comment_btn">
+                        <button type="submit" id="pcomment_btn">Post comment</button>
+                        <button id="c_btn">Cancel</button>
+                    </div>
+            </form>
+      </div>
+
+
+
+
     </div>
 
     <div class="footer">
