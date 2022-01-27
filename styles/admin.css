@@ -22,6 +22,7 @@ body {
 }
 
 .container {
+    display: relative;
     background-color: white;
     gap: 4rem;
     border-radius: 30px;
@@ -49,7 +50,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 50%;
+    width: 800px;
 }
 
 .panel td {
@@ -155,7 +156,12 @@ body {
 .btns {
     display: flex;
     gap: 1rem;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btns button {
+  cursor: pointer;
 }
 
 .bod2 {
@@ -233,6 +239,17 @@ body {
     color: var(--green);
 }
 
+.btn-status, .btn-admin {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.btn-block {
+  background-color: transparent;
+  border: none;
+  color: #ff9b9b;
+}
 
 /* *CSS STYLES FOR NAVIGATION BAR AND FOOTER*  */
 
@@ -271,14 +288,13 @@ img {
 }
 
 .footer {
-    padding: 20px;
-    background-color: #51BDC7;
-    color: white;
-    text-align: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+  position: absolute;
+  padding: 20px;
+  left: 0;
+  right: 0;
+  background-color: #51BDC7;
+  color: white;
+  text-align: center;
 }
 
 .github-link {
@@ -293,3 +309,91 @@ img {
 
 
 /* *END* */
+
+
+
+
+
+
+
+
+
+
+
+
+html, body{
+  margin:0;
+  padding:0;
+  font-family:sans-serif;
+}
+
+.profile-container {
+  display: relative;
+}
+
+#menu{
+  position:absolute;
+  top: 580px;
+  left: 57vh;
+  z-index:500;
+  height:50px;
+  border-radius:25px;
+  overflow:hidden;
+  background:var(--green);
+  transition:all .5s ease;
+}
+
+
+#menu-toggle{
+  display:block;
+  cursor:pointer;
+  opacity:0;
+  z-index:999;
+  margin:0;
+  width: 150px;
+  height:50px;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+#menu-toggle:checked~ul{
+  width: 310px;
+  background-position:0px -50px;
+}
+
+ul{
+  list-style-type:none;
+  margin:0;
+  padding:0 0 0 50px;
+  height:50px;
+  width:0px;
+  transition:.5s width ease;
+  background-image:url("https://i.imgur.com/iAQuSQs.png");
+  background-repeat:no-repeat;
+  background-position:0px 0px;
+}
+
+li{
+  display: inline-block;
+  line-height:50px;
+  width: 100px;
+  text-align: center;
+  margin:0;
+  margin-top: 1rem;
+}
+
+li button{
+  display: flex;
+  align-items: center;
+}
+
+li button:hover {
+  color: var(--lightyellow);
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
