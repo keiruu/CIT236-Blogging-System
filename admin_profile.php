@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bulag | Admin View Profile</title>
+    <title>Bulag | Admin Profile</title>
     <link rel="stylesheet" href="styles/admin.css">
 </head>
 
@@ -21,26 +21,9 @@
             </div>
     </div>
 
-    <!-- <div class="container">
-		<form name="update" action="#" method="POST" class="inputs">
-            <input type = "hidden" id = "userId" name = "userId" value="<?= $user['userId']; ?>" required/>
-            <p>Username:</p>
-            <input type = "text" id = "username" name = "username" placeholder="Enter Username" value="<?=  $user['username']; ?>" required/>
-            <p>Email:</p>
-            <input type="email" id="email" name="email" placeholder="Enter Email" value="<?=$user['email']; ?>" required />
-            <p>Password:</p>
-            <input type = "password" id="password" name = "password" placeholder="Enter password" value="<?=$user['password'];  ?>" required/> 
-            
-			<div class="btns">
-				<input class="btn" type="submit" value="Update" id="submit" name="update" />
-				<a href="showUsers.php"><button class="btn-light">Back</button></a>
-			</div>
-		</form>
-	</div> -->
-
    <div class="body-container">
         <div class="profile-container">
-            <h1>View Profile</h1>
+            <h1>Your Profile</h1>
             <div class="container">
                 <form name="update" action="#" method="POST" class="inputs">
                     <input type = "hidden" id = "userId" name = "userId" value="" required/>
