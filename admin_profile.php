@@ -48,9 +48,9 @@
                                     </li>
 
                                     <li>
-                                        <form name="block" action="block.php" method="POST"></form>
-
-                                        <button class="btn-block"><span>Block</span></button>
+                                        <form name="block" action="block.php" method="POST">
+                                            <button type="submit" class="btn-block"><span>Block</span></button>
+                                        </form>
                                     </li>
                                 </ul>
                             </div>
