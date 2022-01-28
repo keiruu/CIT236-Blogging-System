@@ -1,9 +1,5 @@
 <?php
-    require ("db_con.php"); 
-    
         ?>
-
-
 
 <head>
     <meta charset="UTF-8">
@@ -67,7 +63,10 @@
                 <table id="tb1">
                         <tr> 
                             <td> 
-                                <div class="heart_btn"><Button onclick="Toggle1()" id="btnh1" class="h_btn1"><i class="fas fa-heart"></i></Button></div>
+                                <div class="heart_btn"><Button onclick="Toggle1()" id="btnh1" class="h_btn1"><i class="fas fa-heart"></i></Button>
+                                <p id="h_btn_txt2">2 people liked this</p>
+                            </div>
+                                
                     <script>
                         var btnvar1 = document.getElementById('btnh1');
 
