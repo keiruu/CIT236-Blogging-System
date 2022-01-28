@@ -23,7 +23,7 @@
                         if(password_verify($_POST["password"], $row[password"]))
                         {
                             $_SESSION['type']=$row["user_type"];
-                            header("location:index.php);
+                            header("location:index.php");
                         }
                         else{
                             $message= '<div class="alert alert-danger">Wrong Password</div>';
