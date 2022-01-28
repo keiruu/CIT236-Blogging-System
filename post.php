@@ -43,6 +43,7 @@ Morbi faucibus ipsum sed massa malesuada, at lacinia quam consequat. Nullam scel
             <!-- heart testing -->
                     <div class="heart_btn">
                         <Button onclick="Toggle1()" id="btnh1" class="h_btn"><i class="fas fa-heart"></i></Button>
+                            <p id="h_btn_txt">2 people liked this</p>
                     </div>
                     <script>
                         var btnvar1 = document.getElementById('btnh1');
@@ -68,8 +69,8 @@ Morbi faucibus ipsum sed massa malesuada, at lacinia quam consequat. Nullam scel
             </form>
       </div>
     </div>
-  
     <div class="footer">
         Finals Project for CIT236 <br><u><a href="https://github.com/keiruu/CIT236-Blogging-System" class="github-link" target="_blank">Github Repository</a></u></br><br> ABASTILLAS | FORMOSO | PARCON | SOQUENO | UNATING</br>
     </div>
 </body>
+
