@@ -35,7 +35,8 @@
                     <input type="username" id="username" name="username" placeholder="Enter your username">
                     <input type="email" id="email" name="email" placeholder="Enter your email">
                     <input type="password" id="password" name="password" placeholder="Enter your password">
-                    <button type="submit" id="btn">Register -></button>
+					<input type="role" id="role" name="role" placeholder="Enter your role">
+                    <button type="submit" action="regsave.php" id="btn">Register -></button>
                 </form>
             </div>
         </div>

@@ -33,10 +33,11 @@
                 <img src="images\redhand.png" id="rhand">
         </div>
 
-        <div class="bod1">
+        <div class="bod1"  >
         <H1> Share your thoughts <br> with the world. </br> </H1>
-            <button type="submit" id="btn" style="vertical-align:middle"><span>Become a Blogger</span></button>
-        </div>
+            <button type="submit"  action="signup.php" id="btn"  style="vertical-align:middle"><span>Become a Blogger</span></button>
+            <button type="submit"  action="signup.php" id="btn"  style="vertical-align:middle"><span> Become an Admin</span></button>
+	   </div>
 
         <div class="bod2">
             <div class="img_container3">

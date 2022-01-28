@@ -15,7 +15,7 @@
             <div class="header-right">
                 <a href="admin_Home.php">Home</a>
                 <a href="admin_view_profile.php">Profile</a>
-                <a href="admin_panel_conent.php">
+                <a href="admin_panel.php">
                     <button id="loginbtn">Admin Panel</button>
                 </a>
             </div>
@@ -28,10 +28,10 @@
               <table class="panel">
                 <tr>
                   <th>Users</th>
-                  <th>Status</th>
+                  <th>Users Status</th>
                   <th>Actions</th>
                   <th>Add Your Post</th>
-				  
+				   
 				  
                 </tr>
                 
@@ -41,13 +41,13 @@
                   Insert niyo lang ang dapat nga values from db kag isulod tanan sa foreach loop
                 -->
                 <tr>
-                  <td>abbyunat@gmail.com</td>
-                  <td class="inactive"><p>Inactive</p></td>
+                  <td> <button class="btn-posts"><a href="admin_view_posts.php">See Users</a></button></td>
+                  <td> <button class="btn-profile"><a href="admin_view_profile.php">View their Status</a></button> </td>
  
 				  <td>
                     <div>
-                      <button class="btn-posts"><a href="admin_view_posts.php">View Posts</a></button>
-                      <button class="btn-profile"><a href="admin_view_profile.php">View Profile</a></button>
+                      <button class="btn-posts"><a href="admin_view_posts.php">View your Posts</a></button>
+                      <button class="btn-profile"><a href="admin_view_profile.php">View your Profile</a></button>
 					  <td> <button class="btn-profile"><a href="addpost.php">Add Post </a></button> </td>
                     </div>
 					

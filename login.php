@@ -34,7 +34,7 @@
                 <form action="#">
                     <input type="email" id="email" name="email" placeholder="Enter your email">
                     <input type="password" id="password" name="password" placeholder="Enter your password">
-                    <button type="submit" id="btn">Log In -></button>
+                    <button type="submit" id="btn" action="validatelogin.php">Log In -></button>
                 </form>
             </div>
         </div>

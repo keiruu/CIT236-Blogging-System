@@ -13,8 +13,8 @@
     <div class="header">
         <img src="images/Logo.png" width="150px" height="30px">
             <div class="header-right">
-                <a href="admin_Home.php">Home</a>
-                <a href="admin_view_profile.php">Profile</a>
+                <a href="admin_Home.php" class="login_link" >Home</a>
+                <a href="admin_view_profile.php" class="login_link" >Profile</a>
                 <a href="admin_panel.php">
                     <button id="loginbtn">Admin Panel</button>
                 </a>
