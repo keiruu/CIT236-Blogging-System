@@ -1,47 +1,60 @@
 <?php
-    require ("db_con.php");
-    $message ='';
-    if(isset($_POST["login"]))
+    require ('db_con.php');
+    if(isset($_SESSION["type"]))
+{
+ header("location:index.php");
+}
+$message = '';
+if(isset($_POST["login"]))
+{
+ if(empty($_POST["email"]) || empty($_POST["password"]))
+ {
+  $message = "<div class='alert alert-danger'>Both Fields are required</div>";
+ }
+ else
+ {
+  $query = "
+  SELECT * FROM user 
+  WHERE email = email
+  ";
+  $statement = $connect->prepare($query);
+  $statement->execute(
+   array(
+    'email' => $_POST["email"]
+   )
+  );
+  $count = $statement->rowCount();
+  if($count > 0)
+  {
+   $result = $statement->fetchAll();
+   foreach($result as $row)
+   {
+    if($row["user_status"] == 'Active')
     {
-        if (empty($_POST['email']) || empty($POST ["password"])) 
-        {
-           $message ="<div class= 'alert alert-danger'>Both Fields are required </div>"; // code...
-        }
-        else{
-            $query=" SELECT * FROM user WHERE email= :useremail";
-            $statement= $connect-> prepare($query);
-            $statement->execute(
-                array('email' => $_POST["email"]
-            )
-        );
-            $count= $statement -> rowCount();
-            if ($count>0)
-            {
-                $result= $statement->fetchAll;
-                foreach ($result as $row) {
-                    if($row["user_status"]=='Active'){
-                        if(password_verify($_POST["password"], $row[password"]))
-                        {
-                            $_SESSION['type']=$row["user_type"];
-                            header("location:index.php");
-                        }
-                        else{
-                            $message= '<div class="alert alert-danger">Wrong Password</div>';
-                        }
-
-                    }
-                    $message= '<div class= "alert alert-danger">Your Account has been disabled, Please Contact Admin</div>'
-                }
-            }
-            else
-            {
-                $message = "<div class= 'alert alert-danger'>
-                Wrong Email Address</div>";
-            }
-        }
+     if(password_verify($_POST["password"], $row["password"]))
+     {
+      $_SESSION["type"] = $row["user_type"];
+      header("location: index.php");
+     }
+     else
+     {
+      $message = '<div class="alert alert-danger">Wrong Password</div>';
+     }
     }
+    else
+    {
+     $message = '<div class="alert alert-danger">Your Account has been disabled, please contact admin</div>';
+    }
+   }
+  }
+  else
+  {
+   $message = "<div class='alert alert-danger'>Wrong Email Address</div>";
+  }
+ }
+}
 
-    ?>
+                        ?>
 
 <head>
     <meta charset="UTF-8">

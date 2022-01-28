@@ -1,11 +1,11 @@
 <?php
-	require ("db_con.php");
+	require ('db_con.php');
 	
 	
-	$userName = $_POST['username'];
+	$email = $_POST['email'];
 	$password = $_POST['password'];
 
-	$usersql = $conn->prepare ("Select * from user where username = '$username' AND password = '$password'");
+	$usersql = $conn->prepare ("Select * from user where email = '$email' AND password = '$password'");
 
 	$usersql->execute();
 	$user = $usersql->fetch();
@@ -15,13 +15,13 @@
 			<script>
 				alert ('WELCOME ADMIN');
 			</script> ";
-			header('Location: showUsers.php');
+			header('Location: admin_panel.php');
 		}
 		else if ($user['role'] == 'user') {
 			"<script>
 				alert ('WELCOME USER');
 			</script> ";
-			header('Location: editProfileuser.php?id='.$user['userid']);		
+			header('Location: admin_panel.php?id='.$user['userid']);		
 		} else {
 			"<script>
 				alert ('No Records Found');
