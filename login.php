@@ -1,5 +1,47 @@
 <?php
-?>
+    require ("db_con.php");
+    $message ='';
+    if(isset($_POST["login"]))
+    {
+        if (empty($_POST['email']) || empty($POST ["password"])) 
+        {
+           $message ="<div class= 'alert alert-danger'>Both Fields are required </div>"; // code...
+        }
+        else{
+            $query=" SELECT * FROM user WHERE email= :useremail";
+            $statement= $connect-> prepare($query);
+            $statement->execute(
+                array('email' => $_POST["email"]
+            )
+        );
+            $count= $statement -> rowCount();
+            if ($count>0)
+            {
+                $result= $statement->fetchAll;
+                foreach ($result as $row) {
+                    if($row["user_status"]=='Active'){
+                        if(password_verify($_POST["password"], $row[password"]))
+                        {
+                            $_SESSION['type']=$row["user_type"];
+                            header("location:index.php);
+                        }
+                        else{
+                            $message= '<div class="alert alert-danger">Wrong Password</div>';
+                        }
+
+                    }
+                    $message= '<div class= "alert alert-danger">Your Account has been disabled, Please Contact Admin</div>'
+                }
+            }
+            else
+            {
+                $message = "<div class= 'alert alert-danger'>
+                Wrong Email Address</div>";
+            }
+        }
+    }
+
+    ?>
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +52,7 @@
 </head>
 
 <body>
+    <form name="register" action="validatelogin.php" method="POST">
     <div class="header">
         <img src="images/Logo.png" width="150px" height="30px">
             <div class="header-right">

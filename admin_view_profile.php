@@ -1,5 +1,6 @@
 <?php
-?>
+    require ("db_con.php");
+    ?>
 
 <head>
     <meta charset="UTF-8">
@@ -20,10 +21,10 @@
                 </a>
             </div>
     </div>
-
-    <!-- <div class="container">
+<!--
+    <div class="container"> 
 		<form name="update" action="#" method="POST" class="inputs">
-            <input type = "hidden" id = "userId" name = "userId" value="<?= $user['userId']; ?>" required/>
+            <input type = "hidden" id = "userID" name = "userID" value="<?= $user['userID']; ?>" required/>
             <p>Username:</p>
             <input type = "text" id = "username" name = "username" placeholder="Enter Username" value="<?=  $user['username']; ?>" required/>
             <p>Email:</p>
@@ -36,9 +37,10 @@
 				<a href="showUsers.php"><button class="btn-light">Back</button></a>
 			</div>
 		</form>
-	</div> -->
+	</div>-->
 
    <div class="body-container">
+    <form name="update" action="update_save.php" method="POST">
         <div class="profile-container">
             <h1>View Profile</h1>
             <div class="container">
@@ -52,29 +54,8 @@
                     <input type = "password" id="password" name = "password" placeholder="Enter password" value="" required/> 
                     
                     <div class="btns">
-                        <div class="menu-container">
-                            <div id="menu">
-                                <input type="checkbox" id="menu-toggle"/>
-                                <ul>
-                                    <!-- Ang sa sulod sang span ga depend tani sa status sang user, kung active or inactive -->
-                                    <li>
-                                        <button class="btn-status">Set as <span> active</span></button>
-                                    </li>
-
-                                    <li>
-                                        <button class="btn-admin">Set as admin</button>
-                                    </li>
-
-                                    <li>
-                                        <button class="btn-block">Block</button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div>
-                            <a href="admin_panel.php" class="btn-light">Back</a>
-                            <input class="btn" type="submit" value="Update" id="submit" name="update" />
-                        </div>
+                        <a href="admin_panel.php" class="btn-light">Back</a>
+                        <input class="btn" type="submit" value="Update" id="submit" name="update" />
                     </div>
                 </form>
             </div>

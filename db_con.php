@@ -4,6 +4,7 @@
 	$userName = 'root';
 	$password = '';
 	$dataBase = 'bloggingsystem';
+	
 	try {
 
 	$conn = new PDO('mysql:host=' . $serverName . ';

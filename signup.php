@@ -1,5 +1,8 @@
 <?php
-?>
+    require ("db_con.php");
+
+
+    ?>
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +13,7 @@
 </head>
 
 <body>
+    <form name="register" action="regsave.php" method="POST">
     <div class="header">
         <img src="images/Logo.png" width="150px" height="30px">
             <div class="header-right">

@@ -1,5 +1,4 @@
-<?php
-?>
+<?php session_start(); ?>
 
 <head>
     <meta charset="UTF-8">
@@ -49,13 +48,15 @@
                                     </li>
 
                                     <li>
-                                        <button class="btn-block">Block</button>
+                                        <form name="block" action="block.php" method="POST"></form>
+
+                                        <button class="btn-block"><span>Block</span></button>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div>
-                            <a href="javascript:history.back()" class="btn-light">Back</a>
+                            <a href="admin_panel.php" class="btn-light">Back</a>
                             <input class="btn" type="submit" value="Update" id="submit" name="update" />
                         </div>
                     </div>
