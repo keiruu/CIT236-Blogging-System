@@ -1,4 +1,9 @@
 <?php
+    require ('db_con.php');
+    $showUsersSql = $conn->prepare ("Select * from post");
+    $showUsersSql->execute();
+    $showUsers = $showUsersSql->fetchAll();
+
 ?>
 
 <head>
@@ -23,23 +28,26 @@
 
   <div class="body-container">
     <div class="bod2">
+        
+    <?php foreach ($showUsers as $usersList): ?>
       <div class="img_container3">
           <img src="images\laptop.png" id="laptop">
       </div>
 
       <div class="info">
-        <!-- Dear Backend, placeholder lang ni ang sa text, exchange it for the values nga ara sa database
-            delete this comment kung ma islan niyo na.
-         -->
+
         <div class="text">
-            <p>January 1, 2022 by Zenrick Parcon</p>
-            <h1>How to apply in <br> Adonis Gay Bar</br></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam<br>
-            pulvinar odio id finibus scelerisque. Nulla sit amet suscipit metus.<br>
-            Nullam viverra nibh eget ex pulvinar,vel pharetra augue malesuada.</p>
+                    <tr>
+                      <td><p><?= $usersList['date']; ?> </p></td>
+                      <td><p><?= $usersList['title']; ?> </p></td>
+                      <td><p><?= $usersList['post']; ?> </p></td>
+                    </tr>
+                    
+            <button type="submit" id="rdmebtn" style="vertical-align:middle"><span><a href="post.php">Read More</a></span></button>
+                 
         </div>
-        <button type="submit" id="rdmebtn" style="vertical-align:middle"><span><a href="post.php">Read More</a></span></button>
       </div>
+    <?php endforeach; ?>
     </div>
   </div>
 
