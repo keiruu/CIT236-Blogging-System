@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 26, 2022 at 12:30 PM
+-- Generation Time: Jan 28, 2022 at 10:07 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -33,9 +33,8 @@ CREATE TABLE IF NOT EXISTS `comment` (
   `commentID` int(11) NOT NULL,
   `comment` varchar(255) NOT NULL,
   `date` varchar(11) NOT NULL,
-  `likeID` int(11) NOT NULL,
   `userID` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -48,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `like` (
   `likeID` int(11) NOT NULL,
   `like` varchar(255) NOT NULL,
   `userID` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -58,13 +57,16 @@ CREATE TABLE IF NOT EXISTS `like` (
 
 DROP TABLE IF EXISTS `post`;
 CREATE TABLE IF NOT EXISTS `post` (
-  `postid` varchar(255) NOT NULL,
+  `postid` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
   `post` varchar(255) NOT NULL,
   `date` varchar(255) NOT NULL,
   `userID` int(11) NOT NULL,
   `commentID` int(11) NOT NULL,
   `likeID` int(11) NOT NULL,
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`postid`),
+  KEY `userID` (`userID`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -78,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `status` (
   `new` varchar(255) NOT NULL,
   `active` varchar(255) NOT NULL,
   `inactive` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -90,7 +92,7 @@ DROP TABLE IF EXISTS `type`;
 CREATE TABLE IF NOT EXISTS `type` (
   `user` varchar(11) NOT NULL,
   `admin` varchar(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -111,14 +113,25 @@ CREATE TABLE IF NOT EXISTS `user` (
   `user_type` text NOT NULL,
   `user_status` varchar(11) NOT NULL,
   PRIMARY KEY (`userID`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`userID`, `role`, `user_fname`, `user_lname`, `username`, `password`, `user_contact`, `email`, `user_type`, `user_status`) VALUES
-(5, 'user', '', '', 'user1', 'user', 0, 'user@gmail.com', '', '');
+(5, 'user', '', '', 'user1', 'user', 0, 'user@gmail.com', '', ''),
+(6, 'user', '', '', 'thrysss', '123123', 0, 'haruyuki099@gmail.com', '', '');
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `post`
+--
+ALTER TABLE `post`
+  ADD CONSTRAINT `userID` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
