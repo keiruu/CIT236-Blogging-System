@@ -41,13 +41,13 @@
                   Insert niyo lang ang dapat nga values from db kag isulod tanan sa foreach loop
                 -->
                 <tr>
-                  <td> <button class="btn-posts"><a href="admin_view_posts.php">See Users</a></button></td>
-                  <td> <button class="btn-profile"><a href="admin_view_profile.php">View their Status</a></button> </td>
+                  <td> <button class="btn-posts"><a href="user_view.php">See Users</a></button></td>
+                  <td> <button class="btn-profile"><a href="userstatus_view.php">View their Status</a></button> </td>
  
 				  <td>
                     <div>
-                      <button class="btn-posts"><a href="admin_view_posts.php">View your Posts</a></button>
-                      <button class="btn-profile"><a href="admin_view_profile.php">View your Profile</a></button>
+                      <button class="btn-posts"><a href="postview.php">View your Posts</a></button>
+                      <button class="btn-profile"><a href="adminprofile_view.php">View your Profile</a></button>
 					  <td> <button class="btn-profile"><a href="addpost.php">Add Post </a></button> </td>
                     </div>
 					
