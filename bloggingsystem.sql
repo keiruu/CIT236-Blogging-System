@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `post` (
   `date` varchar(255) NOT NULL,
   `userID` int(11) NOT NULL,
   `commentID` int(11) NOT NULL,
-  `likeID` int(11) NOT NULL
+  `likeID` int(11) NOT NULL,
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
