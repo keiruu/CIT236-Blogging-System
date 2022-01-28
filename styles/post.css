@@ -21,6 +21,10 @@ body {
     margin: 0;
 }
 
+textarea {
+    resize: none;
+}
+
 .container {
     background-color: white;
     gap: 4rem;

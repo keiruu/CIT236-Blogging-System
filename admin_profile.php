@@ -55,7 +55,7 @@
                             </div>
                         </div>
                         <div>
-                            <a href="admin_panel.php" class="btn-light">Back</a>
+                            <a href="javascript:history.back()" class="btn-light">Back</a>
                             <input class="btn" type="submit" value="Update" id="submit" name="update" />
                         </div>
                     </div>
