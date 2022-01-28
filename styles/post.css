@@ -256,11 +256,11 @@ textarea {
     color: black;
     font-family: 'Inter', sans-serif;
     width: 50rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .comment_btn {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 #pcomment_btn {
@@ -340,6 +340,22 @@ img {
 .github-link {
     text-decoration: none;
     color: white;
+}
+
+
+/* heart */
+
+.h_btn {
+    background: transparent;
+    border: none;
+    padding-bottom: 1rem;
+    font-size: 25px;
+    outline: none;
+    color: grey;
+}
+
+.h_btn i:hover {
+    cursor: pointer;
 }
 
 

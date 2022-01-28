@@ -190,6 +190,10 @@ img {
     display: flex;
 }
 
+#hearteu {
+    padding-right: 1rem;
+}
+
 #tb2 tr td {
     border: 1px solid rgb(238, 232, 232);
     border-radius: 15px;
@@ -237,4 +241,17 @@ img {
 .github-link {
     text-decoration: none;
     color: white;
+}
+
+.h_btn1 {
+    padding-left: 25px;
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    outline: none;
+    color: grey;
+}
+
+.h_btn1 i:hover {
+    cursor: pointer;
 }

@@ -16,6 +16,7 @@
     <title>Software Technology Final Exam</title>
 
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://kit.fontawesome.com/d4ca20db22.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -68,7 +69,21 @@
             <div class="table_container">
                 <table id="tb1">
                         <tr> 
-                            <td><img src="images\hearteu.png" id="hearteu">2 people liked this</td>
+                            <td> 
+                                <div class="heart_btn"><Button onclick="Toggle1()" id="btnh1" class="h_btn1"><i class="fas fa-heart"></i></Button></div>
+                    <script>
+                        var btnvar1 = document.getElementById('btnh1');
+
+                            function Toggle1(){
+                            if (btnvar1.style.color =="red") {
+                                    btnvar1.style.color = "grey"
+                                }
+                                else{
+                                    btnvar1.style.color = "red"
+                                }
+                            }
+                    </script>
+                            </td>
                         </tr>
                 </table>
                         <p>COMMENTS<p>
