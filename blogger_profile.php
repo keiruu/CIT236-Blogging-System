@@ -1,11 +1,10 @@
 <?php
-     SESSION_START();
     require ("db_con.php");
-    $user = isset($_GET['id']) ? $_GET['id'] : '';
-
-    $usersql = $conn->prepare ("Select * from user where userID='$user'");
+    $id= $_GET['id'];
+    $usersql = $conn->prepare ("Select * from user where userID='$id'");
     $usersql->execute();
     $user = $usersql->fetch();
+    
 ?>
 
 <head>
@@ -21,7 +20,7 @@
         <img src="images/Logo.png" width="150px" height="30px">
             <div class="header-right">
                 <a href="blogger_home.php">Home</a>
-                <a href="blogger_profile.php">Profile</a>
+                <a href="blogger_profile.php?id=<?php echo $id; ?>">Profile</a>
                 <a href="blogger_posting.php">
                     <button id="loginbtn">Post</button>
                 </a>
@@ -35,16 +34,18 @@
                 <form name="update" action="update_saveuser.php" method="POST" class="inputs">
                     <input type = "hidden" id = "userId" name = "userId" value="" required/>
                     <p>Username:</p>
-                    <input type = "text" id = "username" name = "username" placeholder="Enter Username" value="" required/>
+                    <input type = "text" id = "username" name = "username" placeholder="Enter Username" value="<?=$user['username']; ?>" required/>
                     <p>Email:</p>
-                    <input type="email" id="email" name="email" placeholder="Enter Email" value="" required />
+                    <input type="email" id="email" name="email" placeholder="Enter Email" value="<?=$user['email']; ?>" required />
                     <p>Password:</p>
-                    <input type = "password" id="password" name = "password" placeholder="Enter password" value="" required/> 
+                    <input type = "password" id="password" name = "password" placeholder="Enter password" value="<?=$user['password']; ?>" required/> 
                     
                     <div class="btns">
                         <div>
                             <a href="javascript:history.back()" class="btn-light">Back</a>
-                            <input class="btn" type="submit" value="Update" id="submit" name="update" />
+                            
+                            <input class="btn" type="submit"><a href="blogger_profile.php?id=<?php echo $id; ?>"></a><value="Update" id="submit" name="update" />
+                            
                         </div>
                     </div>
                 </form>
