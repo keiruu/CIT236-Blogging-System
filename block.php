@@ -1,21 +1,15 @@
 <?php
-session_start(); 
-
-include("db_con.php");
-
-
+    require ('db_con.php');
 
  if(isset($_SESSION["userID"]))
 {
-    $user_id = $_SESSION["userID"];
+    $userid = $_SESSION["userID"];
 
     $con=mysqli_connect("username","password","bloggingsystem");
 
-    if (mysqli_connect_errno()){
-      echo "Failed to connect to MySQL: " . mysqli_connect_error();
-      }
+    
 
-    $result = mysqli_query($con,"SELECT banned FROM user where userID = ".$userID);
+    $result = mysqli_query($con,"SELECT banned FROM user where user_status = ".$user_status);
 
     while($row = mysqli_fetch_array($result)){
         $banned= $row['banned'];
@@ -24,10 +18,10 @@ include("db_con.php");
     mysqli_close($con);
 
     if($banned == "1"){
-        header("Location:lectureaccount.php");
+        header("Location:index.php");
     }
     else{   
-        header("Location:banned.php");
+        header("Location:index.php");
     }
 }
 

@@ -1,4 +1,5 @@
 <?php
+    SESSION_START();
     require ("db_con.php");
     $showUsersSql = $conn->prepare ("Select * from user where role='user'");
   $showUsersSql->execute();
@@ -20,6 +21,7 @@
         <img src="images/Logo.png" width="150px" height="30px">
             <div class="header-right">
                 <a href="admin_home.php">Home</a>
+                
                 <a href="admin_profile.php">Profile</a>
                 <a href="admin_panel.php">
                     <button id="loginbtn">Admin Panel</button>
@@ -34,6 +36,7 @@
               <table class="panel">
                 <tr>
                   <th>Users</th>
+                  <th>Username</th>
                   <th>Status</th>
                   <th>Actions</th>
                 </tr>
@@ -45,7 +48,14 @@
 
                 <tr>
                   <td><p><?= $usersList['email']; ?> </p></td>
-                  <td class="inactive"><p>Inactive</p></td>
+                  <td><p><?= $usersList['username']; ?> </p></td>
+                  <td class="inactive"><p><?= $usersList['user_status']; ?></p></td>
+                  <?php=$user= $usersList['userID'];
+                  $_SESSION['user']="$user"?>
+                
+
+
+                  
                   <td>
                     <div>
                       <button class="btn-posts"><a href="admin_view_posts.php">View Posts</a></button>

@@ -1,4 +1,12 @@
-<?php session_start(); ?>
+<?php
+    require ("db_con.php");
+     $user = isset($_GET['id']) ? $_GET['id'] : '';
+
+    $usersql = $conn->prepare ("Select * from user where userID='$user'");
+    $usersql->execute();
+    $user = $usersql->fetch();
+
+    ?>
 
 <head>
     <meta charset="UTF-8">
@@ -25,7 +33,7 @@
             <h1>Your Profile</h1>
             <div class="container">
                 <form name="update" action="#" method="POST" class="inputs">
-                    <input type = "hidden" id = "userId" name = "userId" value="" required/>
+                    
                     <p>Username:</p>
                     <input type = "text" id = "username" name = "username" placeholder="Enter Username" value="" required/>
                     <p>Email:</p>
@@ -40,22 +48,27 @@
                                 <ul>
                                     <!-- Ang sa sulod sang span ga depend tani sa status sang user, kung active or inactive -->
                                     <li>
-                                        <button class="btn-status">Set as <span> active</span></button>
+
+                                        <button class="btn-status"><span>Set as active</span></button>
                                     </li>
 
                                     <li>
+                                        <form name="set" action="set.php" method="POST">
                                         <button class="btn-admin">Set as admin</button>
                                     </li>
 
                                     <li>
                                         <form name="block" action="block.php" method="POST">
-                                            <button type="submit" class="btn-block"><span>Block</span></button>
+                                            
+                                            <button class="btn-block"><span>Block</span></button>
+                                            
                                         </form>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div>
+                            <form name="update" action="update_save.php" method="POST">
                             <a href="admin_panel.php" class="btn-light">Back</a>
                             <input class="btn" type="submit" value="Update" id="submit" name="update" />
                         </div>

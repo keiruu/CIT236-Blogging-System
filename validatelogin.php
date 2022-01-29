@@ -11,33 +11,28 @@
 	$user = $usersql->fetch();
 	if ($user) {
 		if ($user['role'] == 'admin') {
-			echo "
-			<script>
-				alert ('WELCOME ADMIN');
-			</script> ";
+		
 			header('Location: admin_panel.php');
 		}
 		else if ($user['role'] == 'user') {
-			"<script>
-				alert ('WELCOME USER');
-			</script> ";
-			header('Location: admin_panel.php?id='.$user['userid']);		
+			
+			header('Location: blogger_home.php?id='.$user['userid']);		
 		} else {
 			"<script>
 				alert ('No Records Found');
-				window.location.href = 'index.php';
+				window.location.href = 'login.php';
 			</script> ";
 		}
 	}
 	else {
 		echo"
 			<script>
-				alert ('INVALID USER');
+				alert ('welcome');
 			</script>";
 		}
 	echo "
 		<script>
-			window.location.href = 'index.php';
+			window.location.href = 'blogger_home.php';
 		</script>
 		";
 ?>
