@@ -38,6 +38,7 @@
             pulvinar odio id finibus scelerisque. Nulla sit amet suscipit metus.<br>
             Nullam viverra nibh eget ex pulvinar,vel pharetra augue malesuada.</p>
         </div>
+        <form name="update" action="post.php" method="POST">
         <button type="submit" id="rdmebtn" style="vertical-align:middle"><span>Read More</span></button>
       </div>
     </div>

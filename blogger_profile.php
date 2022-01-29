@@ -1,4 +1,11 @@
 <?php
+     SESSION_START();
+    require ("db_con.php");
+    $user = isset($_GET['id']) ? $_GET['id'] : '';
+
+    $usersql = $conn->prepare ("Select * from user where userID='$user'");
+    $usersql->execute();
+    $user = $usersql->fetch();
 ?>
 
 <head>
@@ -25,7 +32,7 @@
         <div class="profile-container">
             <h1>Your Profile</h1>
             <div class="container">
-                <form name="update" action="#" method="POST" class="inputs">
+                <form name="update" action="update_saveuser.php" method="POST" class="inputs">
                     <input type = "hidden" id = "userId" name = "userId" value="" required/>
                     <p>Username:</p>
                     <input type = "text" id = "username" name = "username" placeholder="Enter Username" value="" required/>

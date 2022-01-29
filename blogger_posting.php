@@ -14,7 +14,7 @@
         <img src="images/Logo.png" width="150px" height="30px">
             <div class="header-right">
                 <a href="index.php">Home</a>
-                <a href="index.php">Profile</a>
+                <a href="blogger_profile.php">Profile</a>
                 <a href="blogger_posting.php">
                     <button id="loginbtn">Post</button>
                 </a>
