@@ -23,7 +23,7 @@ $userid = $_GET['uid'];
                 <a href="admin_home.php?uid=0&adminid=<?php echo $adminid?>">Home</a>
                 <a href="admin_profile.php?uid=0&adminid=<?php echo $adminid?>">Profile</a>
                 <a href="admin_panel.php?uid=0&adminid=<?php echo $adminid?>">
-                    <button id="loginbtn">Admin Panel</button>
+                    <button id="adminbtn">Admin Panel</button>
                 </a>
             </div>
     </div>
@@ -65,9 +65,10 @@ $userid = $_GET['uid'];
             <div class="table_container">
                 <table id="tb1">
                         <tr> 
-                            <div class="heart_btn"><Button onclick="Toggle1()" id="btnh1" class="h_btn3"><i class="fas fa-heart"></i></Button>
-                                <p id="h_btn_txt3">2 people liked this</p>
-                            </div>
+                            <td>
+                                <div class="heart_btn"><Button onclick="Toggle1()" id="btnh1" class="h_btn3"><i class="fas fa-heart"></i></Button>
+                                    <p id="h_btn_txt3">2 people liked this</p>
+                                </div>
                                 
                                 <script>
                                     var btnvar1 = document.getElementById('btnh1');
