@@ -64,7 +64,6 @@ Morbi faucibus ipsum sed massa malesuada, at lacinia quam consequat. Nullam scel
                 <input type="text" id="cmnt1" name="cmnt1" placeholder="Any thoughts about this post?">
                     <div class="comment_btn">
                         <button type="submit" id="pcomment_btn">Post comment</button>
-                        <button id="c_btn">Cancel</button>
                     </div>
             </form>
       </div>
