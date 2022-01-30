@@ -12,7 +12,7 @@
 	if ($user) {
 		if ($user['role'] == 'admin') {
 		
-			header('Location: admin_panel.php?id='.$user['userID']);
+			header('Location: admin_panel.php?uid=0&adminid='.$user['userID']);
 		}
 		else if ($user['role'] == 'user') {
 			

@@ -1,5 +1,6 @@
 <?php 
-$id =$_GET['id'];
+$adminid = $_GET['adminid'];
+$userid = $_GET['uid'];
 ?>
 
 <head>
@@ -18,9 +19,9 @@ $id =$_GET['id'];
         <img src="images\Logo.png" width="150px" height="30px">
 
             <div class="header-right">
-                <a href="admin_home.php?id=<?php echo $id; ?>">Home</a>
-                <a href="admin_profile.php?id=<?php echo $id; ?>">Profile</a>
-                <a href="admin_panel.php?id=<?php echo $id; ?>">
+                <a href="admin_home.php?uid=0&adminid=<?php echo $adminid?>">Home</a>
+                <a href="admin_profile.php?uid=0&adminid=<?php echo $adminid?>">Profile</a>
+                <a href="admin_panel.php?uid=0&adminid=<?php echo $adminid?>">
                     <button id="loginbtn">Admin Panel</button>
                 </a>
             </div>

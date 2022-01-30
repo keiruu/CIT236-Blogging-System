@@ -1,7 +1,8 @@
 <?php
     require ("db_con.php");
-     $id =$_GET['id'];
-    $usersql = $conn->prepare ("Select * from user where userID='$id'");
+    $adminid = $_GET['adminid'];
+    $userid = $_GET['uid'];
+    $usersql = $conn->prepare ("Select * from user where userID='$adminid'");
     $usersql->execute();
     $user = $usersql->fetch();
     
@@ -19,9 +20,9 @@
     <div class="header">
         <img src="images/Logo.png" width="150px" height="30px">
             <div class="header-right">
-                <a href="admin_home.php?id=<?php echo $id; ?>">Home</a>
-                <a href="admin_profile.php?id=<?php echo $id; ?>">Profile</a>
-                <a href="admin_panel.php?id=<?php echo $id; ?>">
+                <a href="admin_home.php?uid=0&adminid=<?php echo $adminid?>">Home</a>
+                <a href="admin_profile.php?uid=0&adminid=<?php echo $adminid?>">Profile</a>
+                <a href="admin_panel.php?uid=0&adminid=<?php echo $adminid?>">
                     <button id="loginbtn">Admin Panel</button>
                 </a>
             </div>
@@ -32,7 +33,7 @@
             <h1>Your Profile</h1>
             <div class="container">
                 <form name="update" action="#" method="POST" class="inputs">
-                    <input type = "hidden" id = "userId" name = "userId" value="<?= $id?>" required/>
+                    <input type = "hidden" id = "userId" name = "userId" value="<?= $adminid?>" required/>
                      <p>Username:</p>
                     <input type = "text" id = "username" name = "username" placeholder="Enter Username" value="<?=$user['username']; ?>" required/>
                     <p>Email:</p>
@@ -68,8 +69,8 @@
                             </div>
                         </div>
                         <div>
-                            <form name="update" action="update_save.php" method="POST">
-                            <a href="admin_panel.php" class="btn-light">Back</a>
+                            <form name="update" action="update_save.php?uid=0&adminid=<?php echo $adminid?>" method="POST">
+                            <a href="admin_home.php?uid=0&adminid=<?php echo $adminid?>" class="btn-light">Back</a>
                             <input class="btn" type="submit" value="Update" id="submit" name="update" />
                         </div>
                     </div>

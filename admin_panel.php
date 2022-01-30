@@ -1,11 +1,11 @@
 <?php
     
     require ("db_con.php");
-     $id =$_GET['id'];
+    $adminid =$_GET['adminid'];
+    $userid =$_GET['uid'];
     $showUsersSql = $conn->prepare ("Select * from user where role='user'");
-  $showUsersSql->execute();
-  $showUsers = $showUsersSql->fetchAll(); 
-  
+    $showUsersSql->execute();
+    $showUsers = $showUsersSql->fetchAll(); 
     ?>
 
 
@@ -21,10 +21,10 @@
     <div class="header">
         <img src="images/Logo.png" width="150px" height="30px">
             <div class="header-right">
-                <a href="admin_home.php?id=<?php echo $id; ?>">Home</a>
+                <a href="admin_home.php?uid=0&adminid=<?php echo $adminid?>">Home</a>
                 
-                <a href="admin_profile.php?id=<?php echo $id; ?>">Profile</a>
-                <a href="admin_panel.php?id=<?php echo $id; ?>">
+                <a href="admin_profile.php?uid=0&adminid=<?php echo $adminid?>">Profile</a>
+                <a href="admin_panel.php?uid=0&adminid=<?php echo $adminid?>">
                     <button id="loginbtn">Admin Panel</button>
                 </a>
             </div>
@@ -61,8 +61,7 @@
                     <div>
                       <button class="btn-posts"><a href="admin_view_posts.php">View Posts</a></button>
 
-                      <button class="btn-profile" type="submit"><a href="admin_profile.php?
-                        id=<?php echo $id ?>">View Profile</a></button>
+                      <button class="btn-profile" type="submit"><a href="admin_view_profile.php?uid=<?php echo $id ?>&adminid=<?php echo $adminid?>">View Profile</a></button>
                   
                     </div>
                   </td>
