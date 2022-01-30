@@ -274,6 +274,22 @@ textarea {
     cursor: pointer;
 }
 
+.del_btn1 {
+    margin-left: 10%;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    outline: none;
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+}
+
+.btns_top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
 
 /* *CSS STYLES FOR NAVIGATION BAR AND FOOTER*  */
 
@@ -306,7 +322,7 @@ img {
     padding: 10px;
     border: none;
     border-radius: 75px;
-    width: 130px;
+    width: 100px;
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     cursor: pointer;

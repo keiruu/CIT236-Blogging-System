@@ -292,14 +292,14 @@ img {
     color: black;
 }
 
-#loginbtn {
+#postbtn {
     background: rgb(253, 210, 144);
     background: linear-gradient(90deg, #51BDC7 0%, #8AA6FA 100%);
     color: white;
     padding: 10px;
     border: none;
     border-radius: 75px;
-    width: 130px;
+    width: 100px;
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     cursor: pointer;
@@ -323,24 +323,6 @@ img {
 .github-link {
     text-decoration: none;
     color: white;
-}
-
-.h_btn2 {
-    padding-left: 25px;
-    background: transparent;
-    border: none;
-    font-size: 25px;
-    outline: none;
-    color: grey;
-}
-
-.h_btn2 i:hover {
-    cursor: pointer;
-}
-
-#h_btn_txt2 {
-    display: inline-block;
-    padding-left: 5px;
 }
 
 
