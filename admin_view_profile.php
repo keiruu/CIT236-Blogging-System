@@ -1,12 +1,12 @@
 <?php
-     SESSION_START();
+     
+    
     require ("db_con.php");
-    $user = isset($_GET['id']) ? $_GET['id'] : '';
-
-    $usersql = $conn->prepare ("Select * from user where userID='$user'");
+    $id =$_GET['id'];
+    $usersql = $conn->prepare ("Select * from user where userID='$id'");
     $usersql->execute();
     $user = $usersql->fetch();
-
+    
     ?>
 
 
@@ -19,14 +19,13 @@
 </head>
 
 <body>
-    <?php 
-    echo $_SESSION['user'];?>
+    
     <div class="header">
         <img src="images/Logo.png" width="150px" height="30px">
             <div class="header-right">
-                <a href="admin_home.php">Home</a>
-                <a href="admin_profile.php">Profile</a>
-                <a href="admin_panel.php">
+                <a href="admin_home.php?id=<?php echo $id; ?>">Home</a>
+                <a href="admin_profile.php?id=<?php echo $id; ?>">Profile</a>
+                <a href="admin_panel.php?id=<?php echo $id; ?>">
                     <button id="loginbtn">Admin Panel</button>
                 </a>
             </div>
@@ -39,17 +38,20 @@
             <h1>View Profile</h1>
             <div class="container">
                 <form name="update" action="update_save.php" method="POST" class="inputs">
-                    <input type = "hidden" id = "userId" name = "userId" value="" required/>
+                    <input type = "hidden" id = "userId" name = "userId" value="<?= $id?>" required/>
+
                     <p>Username:</p>
-                    <input type = "text" id = "username" name = "username" placeholder="Enter Username" value="" required/>
+                    <input type = "text" id = "username" name = "username" placeholder="Enter Username" value="<?=$user['username']; ?>" required/>
                     <p>Email:</p>
-                    <input type="email" id="email" name="email" placeholder="Enter Email" value="<?=  $user['username']; ?>" required />
+                    <input type="email" id="email" name="email" placeholder="Enter Email" value="<?=$user['email']; ?>" required />
                     <p>Password:</p>
                     <input type = "password" id="password" name = "password" placeholder="Enter password" value="<?=$user['password'];  ?>" required/> 
                     
                     <div class="btns">
                         <a href="admin_panel.php" class="btn-light">Back</a>
+                        <form name="update" action= "update_save.php" method = "POST" >
                         <input class="btn" type="submit" value="Update" id="submit" name="update" />
+                    </form>
                     </div>
                 </form>
             </div>

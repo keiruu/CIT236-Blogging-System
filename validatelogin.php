@@ -4,19 +4,19 @@
 	
 	$email = $_POST['email'];
 	$password = $_POST['password'];
-
 	$usersql = $conn->prepare ("Select * from user where email = '$email' AND password = '$password'");
 
 	$usersql->execute();
 	$user = $usersql->fetch();
+
 	if ($user) {
 		if ($user['role'] == 'admin') {
 		
-			header('Location: admin_panel.php');
+			header('Location: admin_panel.php?id='.$user['userID']);
 		}
 		else if ($user['role'] == 'user') {
 			
-			header('Location: blogger_home.php?id='.$user['userid']);		
+			header('Location: blogger_home.php?id='.$user['userID']);		
 		} else {
 			"<script>
 				alert ('No Records Found');

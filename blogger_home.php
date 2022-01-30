@@ -1,4 +1,11 @@
-<?php session_start(); ?>
+<?php 
+    require ("db_con.php");
+    $id =$_GET['id'];
+    $usersql = $conn->prepare ("Select * from user where userID='$id'");
+    $usersql->execute();
+    $user = $usersql->fetch();
+
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -11,13 +18,14 @@
 </head>
 
 <body>
+    
 
     <div class="header">
         <img src="images\Logo.png" width="150px" height="30px">
 
             <div class="header-right">
                 <a href="blogger_home.php">Home</a>
-                <a href="blogger_profile.php">Profile</a>
+                <a href="blogger_profile.php?id=<?php echo $id; ?>">Profile</a>
                 <a href="blogger_posting.php">
                     <button id="loginbtn">Post</button>
                 </a>

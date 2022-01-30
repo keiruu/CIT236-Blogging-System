@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php 
+$id =$_GET['id'];
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -16,9 +18,9 @@
         <img src="images\Logo.png" width="150px" height="30px">
 
             <div class="header-right">
-                <a href="admin_home.php">Home</a>
-                <a href="admin_profile.php">Profile</a>
-                <a href="admin_panel.php">
+                <a href="admin_home.php?id=<?php echo $id; ?>">Home</a>
+                <a href="admin_profile.php?id=<?php echo $id; ?>">Profile</a>
+                <a href="admin_panel.php?id=<?php echo $id; ?>">
                     <button id="loginbtn">Admin Panel</button>
                 </a>
             </div>
