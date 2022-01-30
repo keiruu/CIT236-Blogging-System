@@ -41,33 +41,7 @@
                     <p>Password:</p>
                     <input type = "password" id="password" name = "password" placeholder="Enter password" value="<?=$user['password'];  ?>" required/> 
                      
-                    
                     <div class="btns">
-                        <div class="menu-container">
-                            <div id="menu">
-                                <input type="checkbox" id="menu-toggle"/>
-                                <ul>
-                                    <!-- Ang sa sulod sang span ga depend tani sa status sang user, kung active or inactive -->
-                                    <li>
-
-                                        <button class="btn-status"><span>Set as active</span></button>
-                                    </li>
-
-                                    <li>
-                                        <form name="set" action="set.php" method="POST">
-                                        <button class="btn-admin">Set as admin</button>
-                                    </li>
-
-                                    <li>
-                                        <form name="block" action="block.php" method="POST">
-                                            
-                                            <button class="btn-block"><span>Block</span></button>
-                                            
-                                        </form>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
                         <div>
                             <form name="update" action="update_save.php?uid=0&adminid=<?php echo $adminid?>" method="POST">
                             <a href="admin_home.php?uid=0&adminid=<?php echo $adminid?>" class="btn-light">Back</a>

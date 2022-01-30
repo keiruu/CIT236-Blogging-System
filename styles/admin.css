@@ -112,7 +112,6 @@ body {
 .inputs input:not(.btn) {
     padding: 1rem;
     border: 1px solid var(--lightgray);
-    color: var(--lightgray);
     border-radius: 15px;
 }
 
@@ -130,6 +129,7 @@ body {
     border-radius: 15px;
     cursor: pointer;
     transition: all 300ms ease;
+    font-size: 16px;
 }
 
 .btn:hover {
@@ -156,8 +156,9 @@ body {
 .btns {
     display: flex;
     gap: 1rem;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
+    width: 100%;
 }
 
 .btns button {
@@ -272,6 +273,7 @@ img {
 .header-right a {
     text-decoration: none;
     padding: 20px;
+    color: rgb(19, 19, 19);
 }
 
 #loginbtn {

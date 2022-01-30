@@ -34,7 +34,30 @@
 
 
    <div class="body-container">
-    <form name="update" action="update_save.php" method="POST">
+        <div class="menu-container">
+            <div id="menu">
+                <input type="checkbox" id="menu-toggle"/>
+                <ul>
+                    <!-- Ang sa sulod sang span ga depend tani sa status sang user, kung active or inactive -->
+                    <li>
+                        <button class="btn-status"><span>Set as active</span></button>
+                    </li>
+
+                    <li>
+                        <form name="set" action="set.php" method="POST">
+                        <button class="btn-admin">Set as admin</button>
+                    </li>
+
+                    <li>
+                        <form name="block" action="block.php" method="POST">
+                            
+                            <button class="btn-block"><span>Block</span></button>
+                            
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div class="profile-container">
             <h1>View Profile</h1>
             <div class="container">
@@ -51,8 +74,8 @@
                     <div class="btns">
                         <a href="admin_panel.php" class="btn-light">Back</a>
                         <form name="update" action= "update_save.php" method = "POST" >
-                        <input class="btn" type="submit" value="Update" id="submit" name="update" />
-                    </form>
+                            <input class="btn" type="submit" value="Update" id="submit" name="update" />
+                        </form>
                     </div>
                 </form>
             </div>
