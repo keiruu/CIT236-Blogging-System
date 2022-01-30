@@ -245,7 +245,7 @@ body {
 .btn-admin {
     background-color: transparent;
     border: none;
-    color: white;
+    color: var(--green);
 }
 
 .btn-block {
@@ -329,79 +329,24 @@ img {
 
 /* *END* */
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+#menu button {
+    margin: 0 0.5rem;
+    cursor: pointer;
 }
 
-.profile-container {
-    display: relative;
+#menu button:hover {
+    color: var(--darkgreen);
 }
 
 #menu {
-    position: absolute;
-    top: 580px;
-    left: 57vh;
-    z-index: 500;
-    height: 50px;
+    border: 2px solid var(--green);
     border-radius: 25px;
-    overflow: hidden;
-    background: var(--green);
-    transition: all .5s ease;
-}
-
-#menu-toggle {
-    display: block;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 999;
-    margin: 0;
-    width: 150px;
-    height: 50px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-#menu-toggle:checked~ul {
-    width: 310px;
-    background-position: 0px -50px;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0 0 0 50px;
-    height: 50px;
-    width: 0px;
-    transition: .5s width ease;
-    background-image: url("https://i.imgur.com/iAQuSQs.png");
-    background-repeat: no-repeat;
-    background-position: 0px 0px;
-}
-
-li {
-    display: inline-block;
-    line-height: 50px;
-    width: 100px;
-    text-align: center;
-    margin: 0;
-    margin-top: 1rem;
-}
-
-li button {
     display: flex;
+    justify-content: center;
     align-items: center;
-}
-
-li button:hover {
-    color: var(--lightyellow);
+    width: 35rem;
 }
 
 .menu-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
