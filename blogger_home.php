@@ -45,7 +45,7 @@
 
         <div class="bod1">
         <H1> Share your thoughts <br> with the world. </br> </H1>
-            <button type="submit" id="btn" style="vertical-align:middle"><span>Become a Blogger</span></button>
+            <a href="blogger_posting.php" id="btn" style="vertical-align:middle"><span>Start Blogging</span></a>
         </div>
 
         <div class="bod2">
