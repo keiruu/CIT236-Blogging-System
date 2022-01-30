@@ -28,7 +28,7 @@
                 <a href="blogger_home.php">Home</a>
                 <a href="blogger_profile.php?id=<?php echo $id; ?>">Profile</a>
                 <a href="blogger_posting.php">
-                    <button id="loginbtn">Post</button>
+                    <button id="postbtn">Post</button>
                 </a>
             </div>
     </div>
@@ -70,22 +70,23 @@
             <div class="table_container">
                 <table id="tb1">
                         <tr> 
-                            <div class="heart_btn"><Button onclick="Toggle1()" id="btnh1" class="h_btn2"><i class="fas fa-heart"></i></Button>
-                                <p id="h_btn_txt2">2 people liked this</p>
-                            </div>
-                                
-                            <script>
-                                var btnvar1 = document.getElementById('btnh1');
+                            <td>
+                                <div class="heart_btn"><Button onclick="Toggle1()" id="btnh1" class="h_btn2"><i class="fas fa-heart"></i></Button>
+                                    <p id="h_btn_txt2">2 people liked this</p>
+                                </div>
+                                    
+                                <script>
+                                    var btnvar1 = document.getElementById('btnh1');
 
-                                    function Toggle1(){
-                                    if (btnvar1.style.color =="red") {
-                                            btnvar1.style.color = "grey"
+                                        function Toggle1(){
+                                        if (btnvar1.style.color =="red") {
+                                                btnvar1.style.color = "grey"
+                                            }
+                                            else{
+                                                btnvar1.style.color = "red"
+                                            }
                                         }
-                                        else{
-                                            btnvar1.style.color = "red"
-                                        }
-                                    }
-                            </script>
+                                </script>
                             </td>
                         </tr>
                 </table>
