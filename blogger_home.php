@@ -63,7 +63,7 @@
                     pulvinar odio id finibus scelerisque. Nulla sit amet suscipit metus.<br>
                     Nullam viverra nibh eget ex pulvinar,vel pharetra augue malesuada.</p>
                 </div>
-                <button type="submit" id="rdmebtn" style="vertical-align:middle"><span><a href="post.php">Read More</a></span></button>
+                <button type="submit" id="rdmebtn" style="vertical-align:middle"><span><a href="blogger_post.php">Read More</a></span></button>
             </div>
         </div>
         <div class="bod3">
