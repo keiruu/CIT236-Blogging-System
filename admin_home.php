@@ -39,8 +39,8 @@ $userid = $_GET['uid'];
         </div>
 
         <div class="bod1">
-        <H1> Share your thoughts <br> with the world. </br> </H1>
-            <button type="submit" id="btn" style="vertical-align:middle"><span>Become a Blogger</span></button>
+            <H1> Welcome back</br>admin! </H1>
+            <a href="admin_panel.php" id="btn" style="vertical-align:middle"><span>Admin Panel</span></a>
         </div>
 
         <div class="bod2">
