@@ -274,17 +274,6 @@ textarea {
     cursor: pointer;
 }
 
-#c_btn {
-    color: #000000;
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    width: 150px;
-    font-family: 'Inter', sans-serif;
-    cursor: pointer;
-    background-color: transparent;
-}
-
 
 /* *CSS STYLES FOR NAVIGATION BAR AND FOOTER*  */
 
@@ -307,6 +296,7 @@ img {
 .header-right a {
     text-decoration: none;
     padding: 20px;
+    color: black;
 }
 
 #loginbtn {

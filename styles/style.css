@@ -8,8 +8,6 @@ body {
     overflow: hidden;
     background-color: #ffffff;
     padding: 30px;
-    margin-bottom: 2.5rem;
-    box-shadow: 0 5px 5px rgb(214, 214, 214);
 }
 
 img {
@@ -24,12 +22,7 @@ img {
 .header-right a {
     text-decoration: none;
     padding: 20px;
-}
-
-.login_link,
-.home_link {
-    text-decoration: none;
-    padding: 20px;
+    color: black;
 }
 
 #loginbtn {
@@ -39,10 +32,14 @@ img {
     padding: 10px;
     border: none;
     border-radius: 75px;
-    width: 130px;
+    width: 100px;
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     cursor: pointer;
+}
+
+.wrapper {
+    background-color: #F9F9FD;
 }
 
 .bod1 {
@@ -89,6 +86,11 @@ img {
     cursor: pointer;
 }
 
+#btn span a {
+    color: white;
+    text-decoration: none;
+}
+
 #btn span {
     cursor: pointer;
     display: inline-block;
@@ -103,15 +105,18 @@ img {
     top: 0;
     right: -5px;
     transition: 0.5s;
+    text-decoration: none;
 }
 
 #btn:hover span {
     padding-right: 20px;
+    text-decoration: none;
 }
 
 #btn:hover span:after {
     opacity: 100;
     right: 0;
+    text-decoration: none;
 }
 
 .bod2 {
@@ -143,6 +148,7 @@ img {
 
 #rdmebtn span a {
     color: #fc734e;
+    text-decoration: none;
 }
 
 #rdmebtn span {
@@ -257,7 +263,7 @@ img {
     cursor: pointer;
 }
 
-#h_btn_txt2 {
+#h_btn_txt1 {
     display: inline-block;
     padding-left: 5px;
 }

@@ -37,7 +37,7 @@
 
         <div class="bod1">
         <H1> Share your thoughts <br> with the world. </br> </H1>
-            <button type="submit" id="btn" style="vertical-align:middle"><span>Become a Blogger</span></button>
+            <button type="submit" id="btn" style="vertical-align:middle"><span><a href="login.php">Become a Blogger</a></span></button>
         </div>
 
         <div class="bod2">
@@ -64,7 +64,7 @@
                         <tr> 
                             <td> 
                                 <div class="heart_btn"><Button onclick="Toggle1()" id="btnh1" class="h_btn1"><i class="fas fa-heart"></i></Button>
-                                <p id="h_btn_txt2">2 people liked this</p>
+                                <p id="h_btn_txt1">2 people liked this</p>
                             </div>
                                 
                     <script>
