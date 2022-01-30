@@ -23,6 +23,9 @@
     </div>
 
   <div class="body-container">
+    <div class="back-container">
+        <a href="javascript:history.back()"><- back</a>
+    </div>
     <div class="bod2">
       <div class="img_container3">
           <img src="images\laptop.png" id="laptop">
@@ -42,8 +45,9 @@
             pulvinar odio id finibus scelerisque. Nulla sit amet suscipit metus.<br>
             Nullam viverra nibh eget ex pulvinar,vel pharetra augue malesuada.</p>
         </div>
-        <form name="update" action="post.php" method="POST">
-        <button type="submit" id="rdmebtn" style="vertical-align:middle"><span>Read More</span></button>
+        <form name="update" action="admin_post.php" method="POST">
+            <button type="submit" id="rdmebtn" style="vertical-align:middle"><span>Read More</span></button>
+        </form>
       </div>
     </div>
   </div>

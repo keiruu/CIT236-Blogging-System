@@ -241,6 +241,15 @@ body {
     color: var(--green);
 }
 
+.back-container a{
+    color: var(--green);
+}
+
+.back-container {
+    width: 65%;
+    margin-bottom: 2rem;
+}
+
 .btn-status,
 .btn-admin {
     background-color: transparent;
