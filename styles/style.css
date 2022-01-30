@@ -51,19 +51,6 @@ img {
     cursor: pointer;
 }
 
-#postbtn {
-    background: rgb(253, 210, 144);
-    background: linear-gradient(90deg, #51BDC7 0%, #8AA6FA 100%);
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 75px;
-    width: 100px;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    cursor: pointer;
-}
-
 .wrapper {
     background-color: #F9F9FD;
 }
@@ -291,24 +278,6 @@ img {
 }
 
 #h_btn_txt1 {
-    display: inline-block;
-    padding-left: 5px;
-}
-
-.h_btn2 {
-    padding-left: 25px;
-    background: transparent;
-    border: none;
-    font-size: 25px;
-    outline: none;
-    color: grey;
-}
-
-.h_btn2 i:hover {
-    cursor: pointer;
-}
-
-#h_btn_txt2 {
     display: inline-block;
     padding-left: 5px;
 }
