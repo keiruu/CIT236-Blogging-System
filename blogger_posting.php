@@ -27,7 +27,7 @@
           <a href="javascript:history.back()"><- back</a><br><br>
           <form action="#" id="post">
             <input type="text" id="title" name="title" placeholder="Enter the title of your blog post">
-            <textarea name="blog" form="post" rows="40" cols="119" id="blog" placeholder="Write your thoughts here..."></textarea>
+            <textarea name="blog" form="post" rows="40" id="blog" placeholder="Write your thoughts here..."></textarea>
             <div class="btn-blog-container">
               <button type="submit" id="btn-post">Post Blog</button>
             </div>
