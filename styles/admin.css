@@ -254,6 +254,21 @@ body {
     color: #ff9b9b;
 }
 
+.del_btn1 {
+    padding-left: 150px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    outline: none;
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+}
+
+#del_btn_txt {
+    display: inline-block;
+}
+
+
 /* *CSS STYLES FOR NAVIGATION BAR AND FOOTER*  */
 
 .header {
@@ -296,6 +311,7 @@ img {
     padding: 20px;
     left: 0;
     right: 0;
+    bottom: 0;
     background-color: #51BDC7;
     color: white;
     text-align: center;

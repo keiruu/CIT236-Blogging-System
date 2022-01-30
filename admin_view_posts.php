@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulag | Admin View Posts</title>
     <link rel="stylesheet" href="styles/admin.css">
+    <script src="https://kit.fontawesome.com/d4ca20db22.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -32,7 +33,10 @@
             delete this comment kung ma islan niyo na.
          -->
         <div class="text">
-            <p>January 1, 2022 by Zenrick Parcon</p>
+            <div class="del_btn">
+                <p id="del_btn_txt">January 1, 2022 by Zenrick Parcon</p>
+                <Button id="btnh1" class="del_btn1"><i class="fas fa-trash-alt"></i></Button>    
+            </div>
             <h1>How to apply in <br> Adonis Gay Bar</br></h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam<br>
             pulvinar odio id finibus scelerisque. Nulla sit amet suscipit metus.<br>

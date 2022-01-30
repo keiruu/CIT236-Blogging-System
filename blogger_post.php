@@ -28,8 +28,11 @@
     <div class="body-container">
       <div class="text-container">
           <!-- Dear Backend, placeholder lang ini. Isli niyo lang except ang back button  -->
-          <a href="javascript:history.back()"><- back</a><br><br>
-          <p>January 1, 2022 by Zenrick Parcon</p>
+          <div class="btns_top">
+                <a href="javascript:history.back()"><- back</a><br><br>
+                <Button id="btnh1" class="del_btn1"><i class="fas fa-trash-alt"></i></Button> 
+          </div>
+                <p>January 1, 2022 by Zenrick Parcon</p>
           <h1>How to apply in Adonis Gay Bar<br><br></h1>
           <p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla volutpat orci vel ultrices. Vivamus pharetra leo at libero gravida, sit amet consectetur sem sagittis. Pellentesque ac porta dolor. Proin tortor est, posuere ut lectus sed, tincidunt fringilla nisi. Phasellus vitae vulputate leo. Sed dui tortor, iaculis sed consequat sed, aliquet at purus. Ut elementum risus quis nunc commodo porta. Pellentesque a euismod mi. Vestibulum vulputate in ipsum et facilisis. Fusce ac quam sit amet nunc gravida vulputate. Donec quis tempus tortor, sed vulputate nunc. Cras tristique volutpat rutrum. Aliquam erat volutpat. Phasellus quis ultricies velit.
 
