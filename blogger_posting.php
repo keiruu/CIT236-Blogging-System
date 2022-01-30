@@ -16,7 +16,7 @@
                 <a href="blogger_home.php">Home</a>
                 <a href="blogger_profile.php">Profile</a>
                 <a href="blogger_posting.php">
-                    <button id="postbtn">Post</button>
+                    <button id="loginbtn">Post</button>
                 </a>
             </div>
     </div>
