@@ -10,7 +10,7 @@ $saveUser->execute();
 
 echo "
 			<script>
-				alert ('Welcom User');
+				alert ('Welcome User');
 			</script> ";
 			header('Location: blogger_home.php');
 ?>

@@ -23,7 +23,7 @@ $userid = $_GET['uid'];
                 <a href="admin_home.php?uid=0&adminid=<?php echo $adminid?>">Home</a>
                 <a href="admin_profile.php?uid=0&adminid=<?php echo $adminid?>">Profile</a>
                 <a href="admin_panel.php?uid=0&adminid=<?php echo $adminid?>">
-                    <button id="adminbtn">Admin Panel</button>
+                    <button id="loginbtn">Admin Panel</button>
                 </a>
             </div>
     </div>
@@ -39,7 +39,7 @@ $userid = $_GET['uid'];
         </div>
 
         <div class="bod1">
-            <H1> Welcome back</br>admin! </H1>
+            <H1> Welcome back</br>Admin! </H1>
             <a href="admin_panel.php" id="btn" style="vertical-align:middle"><span>Admin Panel</span></a>
         </div>
 
@@ -67,10 +67,11 @@ $userid = $_GET['uid'];
                         <tr> 
                             <td>
                                 <div class="heart_btn"><Button onclick="Toggle1()" id="btnh1" class="h_btn3"><i class="fas fa-heart"></i></Button>
-                                    <p id="h_btn_txt3">2 people liked this</p>
+                                    <span class= "click-text"</span>
                                 </div>
                                 
                                 <script>
+                                    
                                     var btnvar1 = document.getElementById('btnh1');
 
                                         function Toggle1(){
@@ -81,6 +82,15 @@ $userid = $_GET['uid'];
                                                 btnvar1.style.color = "red"
                                             }
                                         }
+                                        var clicks = 0;
+
+                                    document.getElementById("clicks").innerHTML = clicks;
+
+                                    $('.like-counter').click(function() {
+                                    clicks += 1;
+                                    document.getElementById("clicks").innerHTML = clicks;
+                                     $('.fas fa-heart').addClass("liked");
+                                        });
                                 </script>
                             </td>
                         </tr>

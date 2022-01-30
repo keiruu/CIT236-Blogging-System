@@ -80,6 +80,18 @@ body {
     transition: all 300ms ease;
 }
 
+#loginbtn {
+    background: rgb(253, 210, 144);
+    background: linear-gradient(90deg, #51BDC7 0%, #8AA6FA 100%);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 75px;
+    width: 100px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
 .btn-profile a {
     text-decoration: none;
     color: #416FCD;

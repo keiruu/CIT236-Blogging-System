@@ -1,4 +1,6 @@
 <?php
+require("db_con.php");
+    $id=$_GET['id'];
 ?>
 
 <head>
@@ -9,28 +11,37 @@
     <link rel="stylesheet" href="styles/blogger.css">
 </head>
 
+
 <body>
+    <p><?php echo $id?></p>
     <div class="header">
         <img src="images/Logo.png" width="150px" height="30px">
             <div class="header-right">
-                <a href="blogger_home.php">Home</a>
-                <a href="blogger_profile.php">Profile</a>
-                <a href="blogger_posting.php">
+                <a href="blogger_home.php?id=<?php echo $id; ?>">Home</a>
+                <a href="blogger_profile.php?id=<?php echo $id; ?>">Profile</a>
+                <a href="blogger_posting.php?id=<?php echo $id?>">
                     <button id="postbtn">Post</button>
+
                 </a>
             </div>
     </div>
 
     <div class="body-container">
       <div class="text-container">
-          <!-- Dear Backend, placeholder lang ini. Isli niyo lang except ang back button  -->
+        <form name = "postblog " action="insertblog.php?id=<?php echo $id?>" method=”POST” class="inputs">
           <a href="javascript:history.back()"><- back</a><br><br>
-          <form action="#" id="post">
+          <form action="insertblog.php?id=<?php echo $id?>" id="post">
             <input type="text" id="title" name="title" placeholder="Enter the title of your blog post">
-            <textarea name="blog" form="post" rows="40" id="blog" placeholder="Write your thoughts here..."></textarea>
+            <textarea name="blog" form="post" rows="40" cols="98" id="blog" placeholder="Write your thoughts here..."></textarea>
+
             <div class="btn-blog-container">
-              <button type="submit" id="btn-post">Post Blog</button>
+               <form name="update" action="insertblog.php?id=<?php echo $id?>" method="POST">
+              <button id="btn-post" type="submit">Post Blog</button>
+
+
+            </form>
             </div>
+        </form>
           </form>
         </div>
     </div>

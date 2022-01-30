@@ -1,5 +1,4 @@
 <?php
-    
     require ("db_con.php");
     $adminid =$_GET['adminid'];
     $userid =$_GET['uid'];

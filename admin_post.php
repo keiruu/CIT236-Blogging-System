@@ -43,19 +43,40 @@ Morbi faucibus ipsum sed massa malesuada, at lacinia quam consequat. Nullam scel
             <!-- heart testing -->
                     <div class="heart_btn">
                         <Button onclick="Toggle1()" id="btnh1" class="h_btn"><i class="fas fa-heart"></i></Button>
-                            <p id="h_btn_txt">2 people liked this</p>
+                            <p id="h_btn_txt"><span class="click"><a id="clicks"></span> Like</p>
+ 
+                            <script>
+                                    var clicks = 0;
+
+                                    document.getElementById("clicks").innerHTML = clicks;
+
+                                    $('.btnh1').click(function() {
+                                    clicks += 1;
+                                    document.getElementById("clicks").innerHTML = clicks;
+                                     
+                                        });
+                            </script>
                     </div>
                     <script>
                         var btnvar1 = document.getElementById('btnh1');
-
                             function Toggle1(){
+
                             if (btnvar1.style.color =="red") {
                                     btnvar1.style.color = "grey"
                                 }
                                 else{
                                     btnvar1.style.color = "red"
                                 }
+                                if (typeof(Storage) !== "undefined") {
+                            if (localStorage.clickcount) {
+                                     localStorage.clickcount = Number(localStorage.clickcount)+1;
+                                } else {
+                                     localStorage.clickcount = 1;
+                                        }
+                                    document.getElementById("clicks").innerHTML = "Like " + localStorage.clickcount + " time(s).";
+                                        } 
                             }
+                            
                     </script>
                 
             <!-- heart testing -->
