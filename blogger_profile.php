@@ -22,7 +22,7 @@
                 <a href="blogger_home.php?id=<?php echo $id?>">Home</a>
                 <a href="blogger_profile.php?id=<?php echo $id; ?>">Profile</a>
                 <a href="blogger_posting.php?id=<?php echo $id?>">
-                    <button id="postbtn">Post</button>
+                    <button id="loginbtn">Post</button>
                 </a>
             </div>
     </div>
