@@ -73,11 +73,27 @@
                     <p>Password:</p>
                     <input type = "password" id="password" name = "password" placeholder="Enter password" value="<?=$user['password'];  ?>" required/> 
                     
-                    <div class="btns">
-                        <a href="admin_panel.php" class="btn-light">Back</a>
-                        <form name="update" action= "update_save.php" method = "POST" >
-                            <input class="btn" type="submit" value="Update" id="submit" name="update" />
-                        </form>
+                    <div class="btns-container">
+                        <div class="menu-container">
+                            <div id="menu">
+                                <!-- Ang sa sulod sang span ga depend tani sa status sang user, kung active or inactive -->
+                                <button class="btn-status"><span>Set as active</span></button>
+
+                                <form name="set" action="set.php" method="POST">
+                                    <button class="btn-admin">Set as admin</button>
+                                </form>
+
+                                <form name="block" action="block.php" method="POST">
+                                    <button class="btn-block">Block</button>
+                                </form>
+                            </div>
+                            <div class="btns">
+                                <a href="admin_panel.php" class="btn-light">Back</a>
+                                <form name="update" action= "update_save.php" method = "POST" >
+                                    <input class="btn" type="submit" value="Update" id="submit" name="update" />
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
