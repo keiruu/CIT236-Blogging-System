@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 29, 2022 at 07:50 PM
+-- Generation Time: Jan 31, 2022 at 03:08 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -58,12 +58,12 @@ CREATE TABLE IF NOT EXISTS `like` (
 
 DROP TABLE IF EXISTS `post`;
 CREATE TABLE IF NOT EXISTS `post` (
-  `postid` varchar(255) NOT NULL,
+  `postid` int(11) NOT NULL AUTO_INCREMENT,
   `post` varchar(255) NOT NULL,
   `date` varchar(255) NOT NULL,
   `userID` int(11) NOT NULL,
   `commentID` int(11) NOT NULL,
-  `likeID` int(11) NOT NULL
+  PRIMARY KEY (`postid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
