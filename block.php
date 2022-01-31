@@ -30,6 +30,7 @@ include("db_con.php");
         header("Location:blogger_home.php");
     }
 }
-echo"
- header(admin_view_profile.php)
+echo
+ header("Location: admin_view_profile.php?uid=0&adminid=".$user['userID']);
+
 ?>

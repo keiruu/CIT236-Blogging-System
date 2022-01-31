@@ -1,6 +1,4 @@
 <?php
-     
-    
     require ("db_con.php");
     $adminid = $_GET['adminid'];
     $userid = $_GET['uid'];
@@ -34,32 +32,9 @@
 
 
    <div class="body-container">
-        <div class="menu-container">
-            <div id="menu">
-                <input type="checkbox" id="menu-toggle"></input>
-                
-                <ul>
-                    <li>
-                        <form name="set" action="set.php" method="POST">
-                        <button class="btn-admin">Set as active</button>
-                    </form>
-                    </li>
-
-                    <li>
-                        <form name="set" action="updatesaveuser.php" method="POST">
-                        <button class="btn-admin">Set as admin</button>
-                    </form>
-                    </li>
-
-                    <li>
-                        <form name="block" action="block.php" method="POST">
-                            
-                            <button class="btn-block"><span>Block</span></button>
-                            </form>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        
+        
+      
         <div class="profile-container">
             <h1>View Profile</h1>
             <div class="container">
@@ -76,10 +51,10 @@
                     <div class="btns-container">
                         <div class="menu-container">
                             <div id="menu">
-                                <!-- Ang sa sulod sang span ga depend tani sa status sang user, kung active or inactive -->
+                            
                                 <button class="btn-status"><span>Set as active</span></button>
 
-                                <form name="set" action="set.php" method="POST">
+                                <form name="set" action="updatesaveuser.php" method="POST">
                                     <button class="btn-admin">Set as admin</button>
                                 </form>
 

@@ -41,12 +41,10 @@
                   <th>Actions</th>
                 </tr>
                 
-                <!-- Dear Backend, placeholder lang liwat ini, ang naka comment nga div ang daw example.
-                  Insert niyo lang ang dapat nga values from db kag isulod tanan sa foreach loop
-                -->
                 <?php foreach ($showUsers as $usersList): ?>
 
                 <tr>
+
                   <td><p><?= $usersList['email']; ?> </p></td>
                   <td><p><?= $usersList['username']; ?> </p></td>
                   <td class="inactive"><p><?= $usersList['user_status']; ?></p></td>
