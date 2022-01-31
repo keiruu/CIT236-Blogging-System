@@ -371,3 +371,11 @@ img {
 
 
 /* *END* */
+
+.comment {
+    border: 1px solid var(--lightgray);
+    padding: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 15px;
+}

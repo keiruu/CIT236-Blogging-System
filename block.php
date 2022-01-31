@@ -5,9 +5,9 @@ include("db_con.php");
 
 
 
- if(isset($_SESSION["userid"]))
+ if(isset($_SESSION["userID"]))
 {
-    $id = $_SESSION["userid"];
+    $id = $_SESSION["userID"];
 
     $con=mysqli_connect("username","password","bloggingsystem");
 
@@ -30,9 +30,7 @@ include("db_con.php");
         header("Location:blogger_home.php");
     }
 }
+echo
+ header("Location: admin_view_profile.php?uid=0&adminid=".$user['userID']);
 
 ?>
-<?php
-
-{
-    $id = $_SESSION["userid"];

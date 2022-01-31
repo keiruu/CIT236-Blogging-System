@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="right">
-                <form action="#">
+                <form action="regsave.php">
                     <input type="email" id="email" name="email" placeholder="Enter your email">
                     <input type="password" id="password" name="password" placeholder="Enter your password">
                     <button type="submit" id="btn"> Log In -></button>

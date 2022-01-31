@@ -21,6 +21,6 @@
     	</script>
 		";
 
-        header ("Location: admin_home.php?uid=0&adminid=".$user['userID']);
+        header ("Location: admin_panel.php?uid=0&adminid=".$user['userID']);
 
  ?>
