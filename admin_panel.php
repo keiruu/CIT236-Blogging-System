@@ -42,21 +42,19 @@
                 </tr>
                 
                 <?php foreach ($showUsers as $usersList): ?>
-
-                <tr>
-
-                  <td><p><?= $usersList['email']; ?> </p></td>
-                  <td><p><?= $usersList['username']; ?> </p></td>
-                  <td class="inactive"><p><?= $usersList['user_status']; ?></p></td>
-                  <?php $id =$usersList['userID'];?>
-                    
-                  <td>
-                    <div>
-                      <button class="btn-posts"><a href="admin_view_posts.php">View Posts</a></button>
-                      <button class="btn-profile" type="submit"><a href="admin_view_profile.php?uid=<?php echo $id ?>&adminid=<?php echo $adminid?>">View Profile</a></button>
-                    </div>
-                  </td>
-                </tr>
+                  <tr>
+                    <td><p><?= $usersList['email']; ?> </p></td>
+                    <td><p><?= $usersList['username']; ?> </p></td>
+                    <td class="active"><p><?= $usersList['user_status']; ?></p></td>
+                    <?php $id =$usersList['userID'];?>
+                      
+                    <td>
+                      <div>
+                        <button class="btn-posts"><a href="admin_view_posts.php">View Posts</a></button>
+                        <button class="btn-profile" type="submit"><a href="admin_view_profile.php?uid=<?php echo $id ?>&adminid=<?php echo $adminid?>">View Profile</a></button>
+                      </div>
+                    </td>
+                  </tr>
                 <?php endforeach; ?>
               
               <!--way lang ni>

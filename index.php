@@ -1,5 +1,9 @@
 <?php
-        ?>
+    require ("db_con.php");
+    $showUsersSql = $conn->prepare ("Select * from post");
+    $showUsersSql->execute();
+    $showUsers = $showUsersSql->fetchAll(); 
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -41,21 +45,23 @@
         </div>
 
         <div class="bod2">
-            <div class="img_container3">
-                <img src="images\laptop.png" id="laptop">
-            </div>
-            <div class="info">
-                <!-- Dear Backend, placeholder lang ni ang sa text, exchange it for the values nga ara sa database
-                    delete this comment kung ma islan niyo na    
-                -->
-                <div class="text">
-                    <p>January 1, 2022 by Zenrick Parcon</p>
-                    <h1>How to apply in <br> Adonis Gay Bar</br></h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam<br>
-                    pulvinar odio id finibus scelerisque. Nulla sit amet suscipit metus.<br>
-                    Nullam viverra nibh eget ex pulvinar,vel pharetra augue malesuada.</p>
+            <div class="flex-container">
+            <?php foreach ($showUsers as $usersList): ?>
+                <div class="text-contain">
+                    <div class="img_container3">
+                        <img src="images\laptop.png" id="laptop">
+                    </div>
+                    <div class="info">
+                            <div class="text">
+                            <p><?= $usersList['date']; ?> by <?= $usersList['userID']; ?></p>
+                            <h1><?= $usersList['title']; ?></h1>
+                            <p><?= $usersList['post']; ?></p>
+                            </div>
+                    
+                            <button type="submit" id="rdmebtn" style="vertical-align:middle"><span><a href="visitor_post.php">Read More</a></span></button>
+                        </div>
                 </div>
-                <button type="submit" id="rdmebtn" style="vertical-align:middle"><span><a href="visitor_post.php">Read More</a></span></button>
+                <?php endforeach; ?>
             </div>
         </div>
         <div class="bod3">

@@ -55,7 +55,7 @@
             <div class="info">
                 <div class="text">
                     <p>January 1, 2022 by Zenrick Parcon</p>
-                    <h1>How to apply in <br> Adonis Gay Bar</br></h1>
+                    <h1>How to become a <br/>better developer</br></h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam<br>
                     pulvinar odio id finibus scelerisque. Nulla sit amet suscipit metus.<br>
                     Nullam viverra nibh eget ex pulvinar,vel pharetra augue malesuada.</p>

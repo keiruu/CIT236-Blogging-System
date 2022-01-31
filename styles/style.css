@@ -25,6 +25,26 @@ img {
     color: black;
 }
 
+.text p {
+    width: 50%;
+}
+
+.info {
+    width: 50%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-contain {
+    display: flex;
+    margin: 1rem 0;
+    justify-content: center;
+}
 #loginbtn {
     background: rgb(253, 210, 144);
     background: linear-gradient(90deg, #51BDC7 0%, #8AA6FA 100%);

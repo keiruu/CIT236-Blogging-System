@@ -40,7 +40,7 @@
                 <p id="del_btn_txt">January 1, 2022 by Zenrick Parcon</p>
                 <Button id="btnh1" class="del_btn1"><i class="fas fa-trash-alt"></i></Button>    
             </div>
-            <h1>How to apply in <br> Adonis Gay Bar</br></h1>
+            <h1>How to become <br>a better developer</br></h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam<br>
             pulvinar odio id finibus scelerisque. Nulla sit amet suscipit metus.<br>
             Nullam viverra nibh eget ex pulvinar,vel pharetra augue malesuada.</p>
