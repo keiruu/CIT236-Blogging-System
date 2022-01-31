@@ -1,4 +1,11 @@
 <?php
+require("db_con.php");
+$id= $_GET['id'];
+    $usersql = $conn->prepare ("Select * from user where userID='$id'");
+    $usersql->execute();
+    $user = $usersql->fetch();
+    
+?>
 ?>
 
 
@@ -63,12 +70,26 @@ Morbi faucibus ipsum sed massa malesuada, at lacinia quam consequat. Nullam scel
                 
             <!-- heart testing -->
         <p>COMMENTS</p>
-            <form action="#">
-                <input type="text" id="cmnt1" name="cmnt1" placeholder="Any thoughts about this post?">
-                    <div class="comment_btn">
+        <form method='POST' action='".setComments($conn)."'>
+            <input type='hidden' name='uid' value='Anonymous'>
+            <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
+
+           <input type="text" id="cmnt1" name="cmnt1" placeholder="Any thoughts about this post?">
+             <div class="comment_btn">
+
                         <button type="submit" id="pcomment_btn">Post comment</button>
                     </div>
-            </form>
+          </form>
+
+         
+             <!--
+             <form action="#">
+                <input type="text" id="cmnt1" name="cmnt1" placeholder="Any thoughts about this post?">
+                    <div class="comment_btn">
+
+                        <button type="submit" id="pcomment_btn">Post comment</button>
+                    </div>
+            </form>-->
       </div>
     </div>
     <div class="footer">

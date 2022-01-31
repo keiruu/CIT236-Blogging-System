@@ -25,9 +25,9 @@
         <img src="images\Logo.png" width="150px" height="30px">
 
             <div class="header-right">
-                <a href="blogger_home.php">Home</a>
+                <a href="blogger_home.php?id=<?php echo $id; ?>">Home</a>
                 <a href="blogger_profile.php?id=<?php echo $id; ?>">Profile</a>
-                <a href="blogger_posting.php">
+                <a href="blogger_posting.php?id=<?php echo $id; ?>">
                     <button id="loginbtn">Post</button>
                 </a>
             </div>
@@ -93,7 +93,7 @@
                         <p>COMMENTS<p>
                 <table id="tb2">
                         <tr>
-                                <td><img src="images\yellow.png"><div>Anghela Abastillas<br>
+                                <td><img src="images\yellow.png"><div>Angela Abastillas<br>
                                 Wow this is very informative!</div>
                                 </td>
                                 
@@ -105,9 +105,7 @@
                         </tr>
                 </table>
                 <table id="tb3">
-                    <tr>
-                        <td>You need to<u><a href="login.php" class="login_link2"> log in</u></a> to comment and like this post</td>
-                    </tr>
+                    
                 </table>
             </div>
         </div>

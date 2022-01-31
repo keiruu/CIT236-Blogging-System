@@ -19,6 +19,7 @@
     <div class="header">
         <img src="images/Logo.png" width="150px" height="30px">
             <div class="header-right">
+
                 <a href="blogger_home.php?id=<?php echo $id?>">Home</a>
                 <a href="blogger_profile.php?id=<?php echo $id; ?>">Profile</a>
                 <a href="blogger_posting.php?id=<?php echo $id?>">
@@ -32,7 +33,7 @@
             <h1>Your Profile</h1>
             <div class="container">
                 <form name="update" action="update_saveuser.php" method="POST" class="inputs">
-                    <input type = "hidden" id = "userId" name = "userId" value="" required/>
+                    <input type = "hidden" id = "userId" name = "userId" value="<?= $id?>" required/>
                     <p>Username:</p>
                     <input type = "text" id = "username" name = "username" placeholder="Enter Username" value="<?=$user['username']; ?>" required/>
                     <p>Email:</p>
@@ -43,8 +44,8 @@
                     <div class="btns">
                         <div>
                             <a href="javascript:history.back()" class="btn-light">Back</a>
-                            
-                            <input class="btn" type="submit"><a href="blogger_profile.php?id=<?php echo $id; ?>"></a><value="Update" id="submit" name="update" />
+                            <form name="update" action= "update_saveuser.php" method = "POST" >
+                            <input class="btn" type="submit" value="Update" id="submit" name="update" />
                             
                         </div>
                     </div>

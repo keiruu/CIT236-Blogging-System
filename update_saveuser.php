@@ -9,16 +9,16 @@
     $updateUser->bindparam(':username', $_POST['username']);
     $updateUser->bindparam(':password', $_POST['password']);
     $updateUser->bindparam(':email', $_POST['email']);
-    
+    $usersql = $conn->prepare ("Select * from user where userID = '$userID'");
     $updateUser->execute();
 
-
+    $user = $usersql->fetch();
 	echo "
     	<script>
     		alert ('Sucessfullly Updated');
     	</script>
 		";
+        header("Location:blogger_profile.php?id=".$userID['userID']);
 
-        header ("Location: blogger_profile.php");
 
  ?>
