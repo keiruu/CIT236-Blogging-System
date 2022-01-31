@@ -40,7 +40,7 @@ $userid = $_GET['uid'];
 
         <div class="bod1">
             <H1> Welcome back</br>Admin! </H1>
-            <a href="admin_panel.php" id="btn" style="vertical-align:middle"><span>Admin Panel</span></a>
+            <a href="admin_panel.php?uid=0&adminid=<?php echo $adminid?>" id="btn" style="vertical-align:middle"><span>Admin Panel</span></a>
         </div>
 
         <div class="bod2">

@@ -34,6 +34,32 @@
 
 
    <div class="body-container">
+        <div class="menu-container">
+            <div id="menu">
+                <input type="checkbox" id="menu-toggle"></input>
+                
+                <ul>
+                    <li>
+                        <form name="set" action="set.php" method="POST">
+                        <button class="btn-admin">Set as active</button>
+                    </form>
+                    </li>
+
+                    <li>
+                        <form name="set" action="updatesaveuser.php" method="POST">
+                        <button class="btn-admin">Set as admin</button>
+                    </form>
+                    </li>
+
+                    <li>
+                        <form name="block" action="block.php" method="POST">
+                            
+                            <button class="btn-block"><span>Block</span></button>
+                            </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div class="profile-container">
             <h1>View Profile</h1>
             <div class="container">
