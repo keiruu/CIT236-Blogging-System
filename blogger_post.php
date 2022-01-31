@@ -1,12 +1,13 @@
 <?php
-require("db_con.php");
-include ('dbh.php');
-include ('comment.php');
-$id= $_GET['id'];
+    require("db_con.php");
+
+    date_default_timezone_set('Asia/Manila');
+    include 'comment.php';
+
+    $id= $_GET['id'];
     $usersql = $conn->prepare ("Select * from user where userID='$id'");
     $usersql->execute();
     $user = $usersql->fetch();
-    
 ?>
 
 
@@ -77,12 +78,19 @@ Morbi faucibus ipsum sed massa malesuada, at lacinia quam consequat. Nullam scel
             <textarea name='message' placeholder="Enter Comment"></textarea><br>
             <button type='submit'id='pcomment_btn' name='CommentSubmit'>Comment</button>
             
+        <?php 
+            echo "<form method='POST' action='".setComments($conn)."'>
+                <input type='hidden' name='userID' value='Anonymous'>
+                <input type='hidden' name='commentID' value='Anonymous'>
+                <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
 
-          </form>
-
-          
+                <input type='text' id='comment' class='comment' name='comment' placeholder='Any thoughts about this post'>
+                <div class='comment_btn'>
+                    <button type='submit' id='pcomment_btn'>Post comment</button>
+                </div>
+            </form>";
+        ?>
         
-         
              <!--
              <form action="#">
                 <input type="text" id="cmnt1" name="cmnt1" placeholder="Any thoughts about this post?">
