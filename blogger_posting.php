@@ -13,35 +13,28 @@ require("db_con.php");
 
 
 <body>
-    <p><?php echo $id?></p>
     <div class="header">
         <img src="images/Logo.png" width="150px" height="30px">
             <div class="header-right">
                 <a href="blogger_home.php?id=<?php echo $id; ?>">Home</a>
                 <a href="blogger_profile.php?id=<?php echo $id; ?>">Profile</a>
-                <a href="blogger_posting.php?id=<?php echo $id?>">
+                <a href="blogger_posting.php?id=<?php echo $id;?>">
                     <button id="postbtn">Post</button>
-
                 </a>
             </div>
     </div>
 
     <div class="body-container">
       <div class="text-container">
-        <form name = "postblog " action="insertblog.php?id=<?php echo $id?>" method=”POST” class="inputs">
+        <form action="insertblog.php?id=<?php echo $id;?>" method=”POST” class="inputs">
           <a href="javascript:history.back()"><- back</a><br><br>
-          <form action="insertblog.php?id=<?php echo $id?>" id="post">
+          <input type = "hidden" id = "userId" name = "userID" value="<?php echo $id?>" required/>
             <input type="text" id="title" name="title" placeholder="Enter the title of your blog post">
-            <textarea name="blog" form="post" rows="40" cols="98" id="blog" placeholder="Write your thoughts here..."></textarea>
-
+            <textarea type ="text" name="post" rows="40" cols="98" id="post" placeholder="Write your thoughts here..."></textarea>
             <div class="btn-blog-container">
-               <form name="update" action="insertblog.php?id=<?php echo $id?>" method="POST">
-              <button id="btn-post" type="submit">Post Blog</button>
+              <button id="btn-post" type="submit" name="blog-post">Post Blog</button>
 
-
-            </form>
             </div>
-        </form>
           </form>
         </div>
     </div>

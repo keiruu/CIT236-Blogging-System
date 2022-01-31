@@ -1,29 +1,16 @@
 <?php
+$date = date('Y-m-d');
 
-	require("db_con.php");
-		
-	if(isset($_POST['submit'])) {
-		$post=$_POST['post'];
-		$userid=$_GET['id'];
+require ("db_con.php");
+$sqlstr = "INSERT INTO post (title, post, date, userID, commentID) VALUES
+(:title, :post, $date, :userID, '2')";
+$saveUser = $conn->prepare($sqlstr);
+$saveUser->bindparam(':title', $_POST['title']);
+$saveUser->bindparam(':post', $_POST['post']);
+$saveUser->bindparam(':userID', $_GET['userID']);
+$saveUser->execute();
 
-			include("db_con.php");
-
-$query="INSERT INTO post (userID, post,) VALUES ('$id' , '$post') ";
-	mysqli_query($conn , $query);
-	$savePost = $conn->prepare($sqlstr);
-	$savePost->bindparam('$post', $_POST['post']);
-	$savePost->bindparam('$id', $_POST['id']);
-	$savePost->execute();
-		$id =$_GET['id'];
-		$usersql = $conn->prepare ("Select * from user where userID = '$id'");
-		$usersql->execute();
-		$user = $usersql->fetch();
-	
-
-	}
-else{
-	header("Location:blogger_posting.php?id=".$user['userID']);
-	}
-
-
+echo 
+			header('Location: blogger_home.php?id='.$userID);
 ?>
+

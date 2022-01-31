@@ -24,9 +24,9 @@ $id= $_GET['id'];
     <div class="header">
         <img src="images/Logo.png" width="150px" height="30px">
             <div class="header-right">
-                <a href="blogger_home.php">Home</a>
+                <a href="blogger_home.php?id=<?php echo $id; ?>">Home</a>
                 <a href="blogger_profile.php?id=<?php echo $id; ?>">Profile</a>
-                <a href="blogger_posting.php">
+                <a href="blogger_posting.phpid=<?php echo $id; ?>">
                     <button id="loginbtn">Post</button>
                 </a>
             </div>

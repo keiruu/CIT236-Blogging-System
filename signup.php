@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-
+    
     <div class="footer">
         Finals Project for CIT236 <br><u><a href="https://github.com/keiruu/CIT236-Blogging-System" class="github-link" target="_blank">Github Repository</a></u></br><br> ABASTILLAS | FORMOSO | PARCON | SOQUENO | UNATING</br>
     </div>
