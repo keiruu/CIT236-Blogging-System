@@ -109,10 +109,7 @@ $userid = $_GET['uid'];
                                 </td>
                         </tr>
                 </table>
-                <table id="tb3">
-                    <tr>
-                        <td>You need to<u><a href="login.php" class="login_link2"> log in</u></a> to comment and like this post</td>
-                    </tr>
+                
                 </table>
             </div>
         </div>

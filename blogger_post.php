@@ -52,22 +52,44 @@ Nunc rutrum id augue at varius. Proin ut nisi libero. Vestibulum justo risus, pu
 Morbi faucibus ipsum sed massa malesuada, at lacinia quam consequat. Nullam scelerisque ultricies enim quis tempor. Proin lobortis pharetra enim at tristique. Vivamus molestie massa sit amet tellus interdum, non blandit magna congue. Pellentesque ante sem, rutrum sit amet interdum vel, fermentum quis arcu. Suspendisse posuere velit ut mattis cursus. Cras sit amet tellus suscipit, rhoncus purus sit amet, auctor est. Praesent porttitor, ipsum ac sollicitudin dictum, mauris nulla vestibulum est, at vulputate purus dolor ut ligula. Ut volutpat nulla augue, imperdiet tincidunt nisl malesuada id. Vestibulum maximus vestibulum velit, id lacinia lacus facilisis vulputate. Fusce imperdiet, erat non pulvinar rhoncus, tellus tortor posuere justo, facilisis tincidunt nunc lectus in nunc. Aliquam erat volutpat. Vivamus laoreet erat fermentum placerat vulputate. Curabitur elementum felis in dui lacinia sodales ac quis dui.</p>
       </div>
       <div class="comments_container">
-                    <div class="heart_btn">
+                   <div class="heart_btn">
                         <Button onclick="Toggle1()" id="btnh1" class="h_btn"><i class="fas fa-heart"></i></Button>
-                            <p id="h_btn_txt">2 people liked this</p>
+                            <p id="h_btn_txt"><span class="click"><a id="clicks"></span> Like</p>
+ 
+                            <script>
+                                    var clicks = 0;
+
+                                    document.getElementById("clicks").innerHTML = clicks;
+
+                                    $('.btnh1').click(function() {
+                                    clicks += 1;
+                                    document.getElementById("clicks").innerHTML = clicks;
+                                     
+                                        });
+                            </script>
                     </div>
                     <script>
                         var btnvar1 = document.getElementById('btnh1');
-
                             function Toggle1(){
+
                             if (btnvar1.style.color =="red") {
                                     btnvar1.style.color = "grey"
                                 }
                                 else{
                                     btnvar1.style.color = "red"
                                 }
+                                if (typeof(Storage) !== "undefined") {
+                            if (localStorage.clickcount) {
+                                     localStorage.clickcount = Number(localStorage.clickcount)+1;
+                                } else {
+                                     localStorage.clickcount = 1;
+                                        }
+                                    document.getElementById("clicks").innerHTML = "Like " + localStorage.clickcount + " time(s).";
+                                        } 
                             }
+                            
                     </script>
+
                 
         
         <p>COMMENTS</p>

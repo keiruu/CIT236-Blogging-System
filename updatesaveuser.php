@@ -1,7 +1,7 @@
 <?php
     require ("db_con.php");
 
-    $sqlstr = 'UPDATE user SET username = :username, password = :password, email = :email WHERE userID = :userID';
+    $sqlstr = 'UPDATE user SET username = :username, password = :password, email = :email, role=:role WHERE userID = :userID';
 
     $updateUser = $conn->prepare($sqlstr);
     
@@ -9,7 +9,8 @@
     $updateUser->bindparam(':username', $_POST['username']);
     $updateUser->bindparam(':password', $_POST['password']);
     $updateUser->bindparam(':email', $_POST['email']);
-    $usersql = $conn->prepare ("Select * from user where userID = '$userID'");
+    $updateUser->bindparam(':role', $_POST['role']);
+    $usersql = $conn->prepare ("Select * from user where userID= 'userID'");
     $updateUser->execute();
 
     $user = $usersql->fetch();

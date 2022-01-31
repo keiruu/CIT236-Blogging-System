@@ -9,6 +9,7 @@
     $updateUser->bindparam(':username', $_POST['username']);
     $updateUser->bindparam(':password', $_POST['password']);
     $updateUser->bindparam(':email', $_POST['email']);
+    
     $updateUser->execute();
 
 
