@@ -1,11 +1,12 @@
 <?php
 require("db_con.php");
+include ('dbh.php');
+include ('comment.php');
 $id= $_GET['id'];
     $usersql = $conn->prepare ("Select * from user where userID='$id'");
     $usersql->execute();
     $user = $usersql->fetch();
     
-?>
 ?>
 
 
@@ -24,9 +25,9 @@ $id= $_GET['id'];
     <div class="header">
         <img src="images/Logo.png" width="150px" height="30px">
             <div class="header-right">
-                <a href="blogger_home.php">Home</a>
+                <a href="blogger_home.php?id=<?php echo $id; ?>">Home</a>
                 <a href="blogger_profile.php?id=<?php echo $id; ?>">Profile</a>
-                <a href="blogger_posting.php">
+                <a href="blogger_posting.php?id=<?php echo $id; ?>">
                     <button id="loginbtn">Post</button>
                 </a>
             </div>
@@ -50,7 +51,6 @@ Nunc rutrum id augue at varius. Proin ut nisi libero. Vestibulum justo risus, pu
 Morbi faucibus ipsum sed massa malesuada, at lacinia quam consequat. Nullam scelerisque ultricies enim quis tempor. Proin lobortis pharetra enim at tristique. Vivamus molestie massa sit amet tellus interdum, non blandit magna congue. Pellentesque ante sem, rutrum sit amet interdum vel, fermentum quis arcu. Suspendisse posuere velit ut mattis cursus. Cras sit amet tellus suscipit, rhoncus purus sit amet, auctor est. Praesent porttitor, ipsum ac sollicitudin dictum, mauris nulla vestibulum est, at vulputate purus dolor ut ligula. Ut volutpat nulla augue, imperdiet tincidunt nisl malesuada id. Vestibulum maximus vestibulum velit, id lacinia lacus facilisis vulputate. Fusce imperdiet, erat non pulvinar rhoncus, tellus tortor posuere justo, facilisis tincidunt nunc lectus in nunc. Aliquam erat volutpat. Vivamus laoreet erat fermentum placerat vulputate. Curabitur elementum felis in dui lacinia sodales ac quis dui.</p>
       </div>
       <div class="comments_container">
-            <!-- heart testing -->
                     <div class="heart_btn">
                         <Button onclick="Toggle1()" id="btnh1" class="h_btn"><i class="fas fa-heart"></i></Button>
                             <p id="h_btn_txt">2 people liked this</p>
@@ -68,19 +68,20 @@ Morbi faucibus ipsum sed massa malesuada, at lacinia quam consequat. Nullam scel
                             }
                     </script>
                 
-            <!-- heart testing -->
+        
         <p>COMMENTS</p>
-        <form method='POST' action='".setComments($conn)."'>
-            <input type='hidden' name='uid' value='Anonymous'>
+        
+            <form method='POST' action='".setComments($conn)."'>
+            <input type='hidden' name='userID' value='Anonymous'>
             <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
+            <textarea name='message' placeholder="Enter Comment"></textarea><br>
+            <button type='submit'id='pcomment_btn' name='CommentSubmit'>Comment</button>
+            
 
-           <input type="text" id="cmnt1" name="cmnt1" placeholder="Any thoughts about this post?">
-             <div class="comment_btn">
-
-                        <button type="submit" id="pcomment_btn">Post comment</button>
-                    </div>
           </form>
 
+          
+        
          
              <!--
              <form action="#">

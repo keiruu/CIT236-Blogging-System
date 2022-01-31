@@ -36,24 +36,26 @@
    <div class="body-container">
         <div class="menu-container">
             <div id="menu">
-                <input type="checkbox" id="menu-toggle"/>
+                <input type="checkbox" id="menu-toggle"></input>
+                
                 <ul>
-                    <!-- Ang sa sulod sang span ga depend tani sa status sang user, kung active or inactive -->
                     <li>
-                        <button class="btn-status"><span>Set as active</span></button>
+                        <form name="set" action="set.php" method="POST">
+                        <button class="btn-admin">Set as active</button>
+                    </form>
                     </li>
 
                     <li>
-                        <form name="set" action="set.php" method="POST">
+                        <form name="set" action="updatesaveuser.php" method="POST">
                         <button class="btn-admin">Set as admin</button>
+                    </form>
                     </li>
 
                     <li>
                         <form name="block" action="block.php" method="POST">
                             
                             <button class="btn-block"><span>Block</span></button>
-                            
-                        </form>
+                            </form>
                     </li>
                 </ul>
             </div>

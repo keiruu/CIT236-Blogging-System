@@ -13,7 +13,6 @@ require("db_con.php");
 
 
 <body>
-    <p><?php echo $id?></p>
     <div class="header">
         <img src="images/Logo.png" width="150px" height="30px">
             <div class="header-right">

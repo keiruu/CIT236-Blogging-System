@@ -13,12 +13,12 @@
     $updateUser->execute();
 
     $user = $usersql->fetch();
-	echo "
-    	<script>
-    		alert ('Sucessfullly Updated');
-    	</script>
-		";
-        header("Location:blogger_profile.php?id=".$userID['userID']);
+    echo "
+        <script>
+            alert ('Sucessfullly Updated');
+        </script>
+        ";
+        header("Location:admin_view_profile.php?uid=0&adminid=".$user['userID']);
 
 
  ?>

@@ -45,7 +45,7 @@
 
         <div class="bod1">
         <H1> Share your thoughts <br> with the world. </br> </H1>
-            <a href="blogger_posting.php" id="btn" style="vertical-align:middle"><span>Start Blogging</span></a>
+            <a href="blogger_posting.php?id=<?php echo $id; ?>" id="btn" style="vertical-align:middle"><span>Start Blogging</span></a>
         </div>
 
         <div class="bod2">
@@ -53,9 +53,6 @@
                 <img src="images\laptop.png" id="laptop">
             </div>
             <div class="info">
-                <!-- Dear Backend, placeholder lang ni ang sa text, exchange it for the values nga ara sa database
-                    delete this comment kung ma islan niyo na    
-                -->
                 <div class="text">
                     <p>January 1, 2022 by Zenrick Parcon</p>
                     <h1>How to apply in <br> Adonis Gay Bar</br></h1>
@@ -63,7 +60,7 @@
                     pulvinar odio id finibus scelerisque. Nulla sit amet suscipit metus.<br>
                     Nullam viverra nibh eget ex pulvinar,vel pharetra augue malesuada.</p>
                 </div>
-                <button type="submit" id="rdmebtn" style="vertical-align:middle"><span><a href="blogger_post.php">Read More</a></span></button>
+                <button type="submit" id="rdmebtn" style="vertical-align:middle"><span><a href="blogger_post.php?id=<?php echo $id; ?>">Read More</a></span></button>
             </div>
         </div>
         <div class="bod3">
